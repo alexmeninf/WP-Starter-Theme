@@ -14,7 +14,7 @@ new_css('owl-theme', 'css/owl.theme.default.min.css');
 new_css('main', 'css/main.css');
 new_css('style', 'style.css');
 
-// use_css('font-roboto');
+use_css('font-roboto');
 use_css('bootstrap');
 // use_css('font-awesome');
 // use_css('owl-carousel');
