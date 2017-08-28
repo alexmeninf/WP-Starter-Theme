@@ -8,6 +8,14 @@ Author: Matt Oliver
 Author URI: http://mattdeveloper.com/
 */
 
+/* -- Remove input background color for Chrome autocomplete -- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: white;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
 
 /* =WordPress Core
 -------------------------------------------------------------- */
