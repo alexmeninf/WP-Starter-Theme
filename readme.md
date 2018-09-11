@@ -1,9 +1,14 @@
 # WP Starter Theme
 
-This theme includes:
+en-US - This theme includes:
+pt-BR - Este tema inclue:
 
-  - [Bootstrap](http://v4-alpha.getbootstrap.com/) - v4.0.0-alpha.6
-  - [Font Awesome](http://fontawesome.io/) - v4.7.0
-  - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - v2.2.1
   - [Modernizr](https://modernizr.com/) - v3.5.0
-  - [jQuery](https://jquery.com/) - v3.2.1
+  - [jQuery](https://jquery.com/) - v3.3.1
+  - [Tether](http://tether.io/) - v1.3.3
+  - [Bootstrap](https://getbootstrap.com/) - v4.1.3
+  - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - v2.3.4
+  - [Font Awesome](http://fontawesome.io/) - v4.7.0
+  - [LightGallery](http://sachinchoolur.github.io/lightGallery/) - v1.6.11
+  - [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/) - v1.14.15
+  - [WOW Animate Plugin](https://wowjs.uk/) - v1.14.15

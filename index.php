@@ -1,11 +1,8 @@
 <?php get_header(); ?>
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 
+<h1>404</h1>
+<p>Page not found, please try again later. =(</p>
 
-<p>Hello world! This is WP Starter Framework.</p>
 
-
-
-<?php endwhile; endif; ?>
 <?php get_footer(); ?>
