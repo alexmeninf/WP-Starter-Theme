@@ -1,11 +1,11 @@
 @charset "utf-8";
 /*
 Theme Name: WP Starter Theme
-Theme URI: 
-Description: WordPress theme that help make websites easily.
+Theme URI:
+Description: WordPress theme that help make websites easily. This version has updates in the plugins.
 Version: 1.0
-Author: Matt Oliver
-Author URI: http://mattdeveloper.com/
+Author: DVulg Soluções
+Author URI: https://dvulgsolucoes.com.br/
 */
 
 /* -- Remove input background color for Chrome autocomplete -- */
@@ -61,7 +61,6 @@ a img.aligncenter {
 
 .wp-caption {
     background: #fff;
-    border: 1px solid #f0f0f0;
     max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
@@ -124,3 +123,4 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+/* ------------ End Wordpress Style ------------ */
