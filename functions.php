@@ -8,7 +8,7 @@ require_once('_framework/framework.php');
 # =================================
 new_css('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 new_css('bootstrap', 'css/bootstrap/bootstrap.css');
-new_css('font-awesome', 'css/font-awesome.min.css');
+new_css('fontawesome', 'fontawesome/css/all.min.css');
 new_css('owl-carousel', 'css/owl.carousel.min.css');
 new_css('owl-theme', 'css/owl.theme.default.min.css');
 new_css('lightgallery', 'css/lightgallery.min.css');
@@ -19,7 +19,7 @@ new_css('style', 'style.css');
 
 use_css('font-roboto');
 use_css('bootstrap');
-//use_css('font-awesome');
+//use_css('fontawesome');
 //use_css('owl-carousel');
 //use_css('owl-theme');
 //use_css('lightgallery');
