@@ -14,5 +14,5 @@ pt-BR
 Você pode usar essa função obtendo esta parte para incluir no template
 get_template_part( string $slug, string $name = null )
 
-Or you can use:
+Ou você pode usar:
 include_once('inc/namefile.php')
