@@ -6,7 +6,7 @@ require_once('_framework/framework.php');
 # =================================
 # =           CSS Files           =
 # =================================
-new_css('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+new_css('font-roboto', 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,500');
 new_css('bootstrap', 'css/bootstrap/bootstrap.css');
 new_css('fontawesome', 'fontawesome/css/all.min.css');
 new_css('owl-carousel', 'css/owl.carousel.min.css');
