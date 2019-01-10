@@ -6,7 +6,8 @@ require_once('_framework/framework.php');
 # =================================
 # =           CSS Files           =
 # =================================
-new_css('font-roboto', 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,500');
+/*----------  New CSS Default  ----------*/
+new_css('font-raleway', 'https://fonts.googleapis.com/css?family=Raleway:200,300,400,500');
 new_css('bootstrap', 'css/bootstrap/bootstrap.css');
 new_css('fontawesome', 'fontawesome/css/all.min.css');
 new_css('owl-carousel', 'css/owl.carousel.min.css');
@@ -17,7 +18,8 @@ new_css('iziToast', 'css/iziToast.min.css');
 new_css('main', 'css/main.css');
 new_css('style', 'style.css');
 
-use_css('font-roboto');
+/*----------  Use CSS Default  ----------*/
+use_css('font-raleway');
 use_css('bootstrap');
 //use_css('fontawesome');
 //use_css('owl-carousel');
@@ -32,6 +34,7 @@ use_css('style');
 # ====================================
 # =           Script Files           =
 # ====================================
+/*----------  New JS Default  ----------*/
 new_js('modernizr', 'js/vendor/modernizr-3.5.0.min.js');
 new_js('jquery', 'js/vendor/jquery-3.3.1.min.js', true);
 new_js('popper', 'js/popper.min.js', true);
@@ -43,6 +46,7 @@ new_js('wow', 'js/wow.min.js', true);
 new_js('iziToast', 'js/iziToast.min.js', true);
 new_js('main', 'js/main.js', true);
 
+/*----------  Use JS Default  ----------*/
 use_js('modernizr');
 use_js('jquery');
 use_js('popper');
