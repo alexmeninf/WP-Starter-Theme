@@ -44,6 +44,7 @@ new_js('lightgallery', 'js/lightgallery.min.js', true);
 new_js('jquery.mask', 'js/jquery.mask.min.js', true);
 new_js('wow', 'js/wow.min.js', true);
 new_js('iziToast', 'js/iziToast.min.js', true);
+new_js('main', 'js/lazyload.min.js', true);
 new_js('main', 'js/main.js', true);
 
 /*----------  Use JS Default  ----------*/
@@ -56,4 +57,5 @@ use_js('bootstrap');
 //use_js('jquery.mask');
 //use_js('wow');
 //use_js('iziToast');
+//use_js('lazyload');
 use_js('main');
