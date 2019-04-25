@@ -7,7 +7,7 @@
 			<div class="col-12 text-center py-5">
 				<h1>404</h1>
 				<p>Página não encontrada. =(</p>
-				<a href="<?php bloginfo('home') ?>" class="btn btn-primary">Inicio</a>
+				<a href="<?php bloginfo('url') ?>" class="btn btn-primary">Início</a>
 			</div>
 		</div>
 	</div>
