@@ -1,7 +1,7 @@
 # WP Starter Theme
 
 en-US - This theme includes:
-pt-BR - Este tema inclue:
+pt-BR - Este tema inclui:
 
   - [Modernizr](https://modernizr.com/) - v3.5.0
   - [jQuery](https://jquery.com/) - v3.3.1
