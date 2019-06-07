@@ -36,7 +36,7 @@ use_css('style-default');
 # ====================================
 /*----------  New JS Default  ----------*/
 new_js('modernizr-default', 'plugins/jquery/modernizr-3.5.0.min.js', true);
-new_js('jquery-default', 'plugins/jquery/jquery-3.3.1.min.js', true);
+new_js('jquery-default', 'plugins/jquery/jquery-3.4.1.min.js', true);
 new_js('popper-default', 'plugins/popper/js/popper.min.js', true);
 new_js('bootstrap-default', 'plugins/bootstrap/js/bootstrap.min.js', true);
 new_js('owl-carousel-default', 'plugins/owl-carousel/js/owl.carousel.min.js', true);
