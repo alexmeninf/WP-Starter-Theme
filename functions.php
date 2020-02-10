@@ -61,3 +61,6 @@ new_js('main-default', 'js/main.js', true);
 // use_js('sweetalert-default');
 // use_js('lazyload-default');
 use_js('main-default');
+
+
+include 'functions/general.php';
