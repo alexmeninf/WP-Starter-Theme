@@ -11,4 +11,7 @@ jQuery(function () {
   //   download: false,
   //   selector: '.img-select'
   // });
+  
+  // // animate
+  // new WOW().init();
 });
