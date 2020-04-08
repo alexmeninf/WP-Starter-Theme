@@ -8,7 +8,7 @@ $grid-breakpoints: (
   xl: 1200px
  ) !default;
 
-@mixin media($width, $type: min) {
+@mixin media($width, $type: min, $dimension: width) {
   @if map_has_key($grid-breakpoints, $width) {
     $width: map_get($grid-breakpoints, $width);
 
@@ -16,7 +16,7 @@ $grid-breakpoints: (
       $width: $width - 1px;
     }
 
-    @media only screen and (#{$type}-width: $width) {
+    @media only screen and (#{$type}-#{$dimension}: $width) {
       @content;
     }
   }
