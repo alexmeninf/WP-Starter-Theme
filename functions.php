@@ -14,7 +14,6 @@ new_css('owl-carousel-default', 'plugins/owl-carousel/css/owl.carousel.min.css')
 new_css('owl-theme-default', 'plugins/owl-carousel/css/owl.theme.default.min.css');
 new_css('lightgallery-default', 'plugins/lightgallery/css/lightgallery.min.css');
 new_css('animate-default', 'plugins/wow/css/animate.css');
-new_css('iziToast-default', 'plugins/izitoast/css/iziToast.min.css');
 new_css('main-default', 'css/main.css');
 new_css('style-default', 'style.css');
 
@@ -26,7 +25,6 @@ new_css('style-default', 'style.css');
 // use_css('owl-theme-default');
 // use_css('lightgallery-default');
 // use_css('animate-default');
-// use_css('iziToast-default');
 use_css('main-default');
 use_css('style-default');
 
@@ -35,9 +33,9 @@ use_css('style-default');
 # =           Script Files           =
 # ====================================
 /*----------  New JS Default  ----------*/
-new_js('modernizr-default', 'plugins/jquery/moderniz.min.js', true);
+new_js('modernizr-default', 'plugins/jquery/modernizr.min.js', true);
 new_js('jquery-default', 'plugins/jquery/jquery.min.js', true);
-new_js('popper-default', 'plugins/popper/js/popper.min.js', true);
+new_js('popper-default', 'plugins/popper.min.js', true);
 new_js('bootstrap-default', 'plugins/bootstrap/js/bootstrap.min.js', true);
 new_js('owl-carousel-default', 'plugins/owl-carousel/js/owl.carousel.min.js', true);
 new_js('lightgallery-default', 'plugins/lightgallery/js/lightgallery.min.js', true);
