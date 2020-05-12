@@ -27,4 +27,4 @@ output_style = :compressed
 
 
 # register new cache
-cache_path = 'C:\temp\sass'
+# cache_path = 'C:\temp\sass'
