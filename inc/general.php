@@ -1,5 +1,4 @@
 <?php
-
 /*===================================================
 =            UPDATE WORDPRESS LOGIN LOGO DARK            =
 ===================================================*/
@@ -20,3 +19,40 @@ function wc_remove_block_library_css(){
 	}
 } 
 add_action( 'wp_enqueue_scripts', 'wc_remove_block_library_css' );
+
+
+/*
+ * Show the page name 
+*/
+function the_title_page() {
+	if (is_404()) {
+		echo 'Página não encontrada';
+
+	} elseif (is_tag()) {
+		single_tag_title();
+
+	} elseif (is_tax()) {
+		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+		echo $term->name;
+
+	} elseif (is_day()) {
+		echo "Arquivo de " . get_the_time('j \d\e F \d\e Y');
+
+	} elseif (is_month()) {
+		echo "Arquivo de " . get_the_time('F \d\e Y');
+
+	} elseif (is_year()) {
+		echo "Arquivo de " . get_the_time('Y');
+
+	} elseif (is_author()) {
+		echo "Arquivo do autor";
+
+	} elseif (isset($_GET['p']) && !empty($_GET['p'])) {
+		echo "Arquivo do blog";
+
+	} elseif (is_search()) {
+		echo "Resultados da pesquisa";
+	} else {
+		the_title();
+	}
+}
