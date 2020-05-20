@@ -10,7 +10,7 @@
 
 <?php get_template_part('template-parts/post/get_prev-next-posts'); ?>
 
-<?php get_template_part('template-parts/post/get_comments'); ?>
+<?php support_commet_facebook('post'); ?> 
 
 
 <?php endwhile; endif; ?>
