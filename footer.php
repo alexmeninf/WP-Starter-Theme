@@ -10,5 +10,7 @@
 
 <?php wp_footer(); ?>
 
+<?php support_commets_facebook(); ?>
+
 </body>
 </html>
