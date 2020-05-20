@@ -6,9 +6,11 @@
 
 <?php get_template_part('template-parts/post/get_tags'); ?>
 
-<?php get_template_part('template-parts/post/get_share-links'); ?>
+<?php get_template_part('template-parts/post/get_share-post'); ?>
 
 <?php get_template_part('template-parts/post/get_prev-next-posts'); ?>
+
+<?php get_template_part('template-parts/post/get_comments'); ?>
 
 
 <?php endwhile; endif; ?>
