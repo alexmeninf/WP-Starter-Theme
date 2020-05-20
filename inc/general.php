@@ -21,9 +21,9 @@ function wc_remove_block_library_css(){
 add_action( 'wp_enqueue_scripts', 'wc_remove_block_library_css' );
 
 
-/*
- * Show the page name 
-*/
+/*========================================
+=            Show the page name          =
+========================================*/
 function the_title_page() {
 	if (is_404()) {
 		echo 'Página não encontrada';
@@ -55,4 +55,36 @@ function the_title_page() {
 	} else {
 		the_title();
 	}
+}
+
+
+/*========================================
+=       Support Facebook comments       =
+========================================*/
+function support_commet_facebook($language = 'pt_BR') {
+	if (is_single()) { ?>
+		<script>
+			jQuery(function() {
+				function fluidComments() {
+					var $myWrap = $(".comment-box");
+					width = $myWrap.width();
+
+					$(".fb-comments").attr("data-width", width);
+					if ($(".fb-comments > span > iframe").length == 1) FB.XFBML.parse();
+				}
+
+				$(function () {
+					fluidComments();
+				});
+
+				var progresso;
+				window.onresize = function () {
+					clearTimeout(progresso);
+					progresso = setTimeout(fluidComments, 100);
+				};
+			});
+		</script>
+		<div id="fb-root"></div>
+	  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/<?= $language ?>/sdk.js#xfbml=1&version=v7.0"></script>
+	<?php }
 }
