@@ -30,6 +30,9 @@ function the_title_page() {
 
 	} elseif (is_tag()) {
 		single_tag_title();
+		
+	} elseif (is_category()) {
+		single_cat_title();
 
 	} elseif (is_tax()) {
 		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
