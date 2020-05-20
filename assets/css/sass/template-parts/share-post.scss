@@ -1,0 +1,38 @@
+.share-post {
+	display: flex;
+	justify-content: space-between;
+
+	span {
+		color: #171717;
+		font-size: 19px;
+		font-weight: 600;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+
+			>a {
+				border-radius: 50%;
+				border: 1px solid;
+				color: #659e39;
+				display: block;
+				font-size: 18px;
+				height: 32px;
+				text-align: center;
+				width: 32px;
+				@extend %transition;
+
+				&:hover {
+					transform: translateY(-7px);
+					@extend %transition;
+				}
+			}
+		}
+	}
+}
