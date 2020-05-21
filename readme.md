@@ -1,7 +1,26 @@
 # WP Starter Theme
 
-en-US - This theme includes:
-pt-BR - Este tema inclui:
+Version: 1.0
+
+**en-US**
+
+ - In this theme you will find the main standard WordPress pages for
+   website or blog operation.
+   
+ - Updates will be carried out constantly to improve included plugins
+   and follow up on new versions of the WordPress platform.
+
+**pt-BR**
+
+ - Neste tema você encontra as principais páginas padrão do WordPress
+   para funcionamento do site ou blog.
+ - As atualizações serão realizadas constatemente para melhoria de
+   plugins incluídos e acompanhamento das versões novas da plataforma
+   WordPress.
+
+## Plugins
+**en-US** - This theme includes:
+**pt-BR** - Este tema inclui:
 
 - [Modernizr](https://modernizr.com/) - v3.10.0
 - [jQuery](https://jquery.com/) - v3.5.0
