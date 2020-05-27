@@ -65,7 +65,7 @@ function the_title_page() {
 /*========================================
 =       Support Facebook comments       =
 ========================================*/
-function support_commet_facebook($order = 'footer', $num_posts = 9, $language = 'pt_BR') {
+function support_comments_facebook($order = 'footer', $num_posts = 9, $language = 'pt_BR') {
 	if (is_single()) :
 		if ($order == 'post') : ?>
 
