@@ -4,11 +4,11 @@
 </a> -->
 
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-6 text-center text-lg-left">
 		<p>&copy; <?= date('Y') . ' ' . get_bloginfo('name') ?>, todos os direitos reservados.</p>
 	</div>
 
-  <div class="col-lg-6">
+  <div class="col-lg-6 text-center text-lg-right">
 		<p>Um desenvolvimento <a href="https://comet.com.br/" target="_blank" rel="noopener" title="Comet">
 				<img src="https://s3-sa-east-1.amazonaws.com/s3.dvulgsolucoes.com.br/assets/img/logo-desenvolvimento-dvulg.png" alt="Comet" height="30">
 			</a>
