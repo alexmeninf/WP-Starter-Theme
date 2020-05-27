@@ -19,7 +19,7 @@
 
 <?php wp_footer(); ?>
 
-<?php support_commets_facebook(); ?>
+<?php support_comments_facebook(); ?>
 
 </body>
 </html>
