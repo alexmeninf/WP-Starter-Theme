@@ -165,3 +165,9 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 		</nav>
 <?php endif;
 }
+
+
+/*========================================
+=            Supost Thumbnals            =
+========================================*/
+add_theme_support( 'post-thumbnails' );
