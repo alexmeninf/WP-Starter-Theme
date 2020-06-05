@@ -4,7 +4,7 @@
  */
 
 $tags = get_tags();
-$html = '<div>';
+$html = '<div class="sidebar-tags">';
 
 foreach ( $tags as $tag ) {
   $tag_link = get_tag_link( $tag->term_id );

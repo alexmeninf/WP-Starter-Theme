@@ -1,14 +1,9 @@
 .share-post {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-	span {
-		color: #171717;
-		font-size: 19px;
-		font-weight: 600;
-	}
-
+	justify-content: space-between;
+	margin-top: 20px;
+	border-bottom: 1px solid #dedede;
+	padding-bottom: 50px;
+	
 	ul {
 		  display: flex;
 		  flex-wrap: wrap;
@@ -24,7 +19,7 @@
 			>a {
 				border-radius: 50%;
 				border: 1px solid;
-				color: #659e39;
+				color: $color-red;
 				display: block;
 				font-size: 18px;
 				height: 32px;

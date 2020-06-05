@@ -1,0 +1,17 @@
+.single-tags {
+  margin-top: 50px;
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 15px;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: $color-default;
+    }
+  }
+}

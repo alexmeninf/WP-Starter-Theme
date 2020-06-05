@@ -1,0 +1,7 @@
+a {
+  @extend %transition;
+
+  &:hover {
+    @extend %transition;
+  }
+}

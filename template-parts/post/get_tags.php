@@ -5,6 +5,9 @@ if ( $post_tags ) {
   $numItems = count($post_tags);
   $i = 0;
 ?>
+
+<div class="single-tags">
+  <span>Tags:</span>
   <ul>
     <?php 
     foreach( $post_tags as $tag ) {
@@ -15,4 +18,5 @@ if ( $post_tags ) {
       }
     } ?>
   </ul>
+</div>
 <?php } ?>

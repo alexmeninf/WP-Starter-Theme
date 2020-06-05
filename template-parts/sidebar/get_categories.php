@@ -4,7 +4,7 @@
  */
 ?>
 
-<ul>
+<ul class="sidebar-categories">
   <?php
   $categories = get_categories( array(
       'orderby' => 'name',

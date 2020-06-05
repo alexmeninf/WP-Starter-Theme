@@ -1,7 +1,8 @@
 @import 'compass/css3';
 @import 'variables';
-@import 'template-parts/pagination-post';
-@import 'template-parts/share-post';
+@import 'global';
+@import 'template-parts/post/single';
+@import 'template-parts/sidebar/sidebar';
 
 /*----------  Page 404  ----------*/
 .page-404 {

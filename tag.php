@@ -39,9 +39,7 @@ $query = new WP_Query($args);
         <?php get_pagination($current_page, $pages_count) ?>
       </div>
       
-      <div class="col-lg-4">
-        <?php get_sidebar(); ?>
-      </div>
+      <?php get_sidebar(); ?>
     </div>
   </div>    
 </section>
