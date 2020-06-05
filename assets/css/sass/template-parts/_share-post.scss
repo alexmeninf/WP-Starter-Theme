@@ -1,6 +1,7 @@
 .share-post {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 	span {
 		color: #171717;
@@ -9,8 +10,11 @@
 	}
 
 	ul {
-		display: flex;
-		flex-wrap: wrap;
+		  display: flex;
+		  flex-wrap: wrap;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
 
 		li {
 			&:not(:last-child) {
@@ -24,6 +28,7 @@
 				display: block;
 				font-size: 18px;
 				height: 32px;
+				line-height: 32px;
 				text-align: center;
 				width: 32px;
 				@extend %transition;
