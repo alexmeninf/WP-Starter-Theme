@@ -8,9 +8,9 @@ function wpdocs_after_setup_theme() {
 add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
 
 
-/*===================================================
-=            UPDATE WORDPRESS LOGIN LOGO DARK            =
-===================================================*/
+/**
+ * UPDATE WORDPRESS LOGIN LOGO DARK
+ */
 function my_login_logo() { ?>
 	<style type="text/css">
 	#login h1 a, .login h1 a {background-image:url('http://s3.dvulgsolucoes.com.br/assets/img/logo-dvulg-wordpress-white.png');background-repeat:no-repeat;height:105px;padding-bottom:30px;width:105px;}body{background:#222!important}.login #backtoblog a,.login #nav a{color:#adadad!important}.login #login_error,.login .message,.login .success,.login form{border-radius:10px}.wp-core-ui .button-primary{background:#eb6358!important;border-color:#eb6358!important;box-shadow:none!important;color:#fff!important;text-decoration:none!important;text-shadow:none!important}
@@ -30,9 +30,9 @@ function wc_remove_block_library_css(){
 add_action( 'wp_enqueue_scripts', 'wc_remove_block_library_css' );
 
 
-/*========================================
-=            Show the page name          =
-========================================*/
+/**
+ * Show the page name
+ */
 function the_title_page() {
 	if (is_404()) {
 		echo 'Página não encontrada';
@@ -71,9 +71,9 @@ function the_title_page() {
 }
 
 
-/*========================================
-=       Support Facebook comments       =
-========================================*/
+/**
+ * Support Facebook comments
+ */
 function support_comments_facebook($order = 'footer', $num_posts = 9, $language = 'pt_BR') {
 	if (is_single()) :
 		if ($order == 'post') : ?>
@@ -113,6 +113,9 @@ function support_comments_facebook($order = 'footer', $num_posts = 9, $language 
 }
 
 
+/**
+ * Pagination in loop posts
+ */
 function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 	wp_reset_query();
 	$args = '';
@@ -148,8 +151,8 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 
 	$url = esc_url($url) . '?' . $args;
 	
-  	if( $pages_count > 0 ) : ?>
-		<nav aria-label="Page navigation example">
+	if( $pages_count > 0 ) : ?>
+		<nav aria-label="Page navigation">
 			<ul class="pagination">
 				<?php
 				echo '<li class="page-item"><a class="page-link" href="'.$url.'pg=1" aria-label="Previous"><span>&laquo;</span></a></li>';
@@ -176,7 +179,7 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 }
 
 
-/*========================================
-=            Supost Thumbnals            =
-========================================*/
+/**
+ * Supost Thumbnals
+*/
 add_theme_support( 'post-thumbnails' );
