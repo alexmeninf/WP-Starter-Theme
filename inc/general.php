@@ -9,6 +9,21 @@ add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 
 
 /**
+ * Wp head
+ */
+function get_og_protocol() { ?>
+	<meta property="og:image" content="<?= has_post_thumbnail(get_the_ID()) ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), "full" )[0] : get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option') ?>"/>  
+	<meta property="og:title" content="<?php echo is_front_page() ? '' : wp_title('', false).' | '; bloginfo('name'); ?>"/>  
+	<meta property="og:url" content="<?php the_permalink() ?>" />
+	<meta property="og:type" content="<?= is_single() ? 'article' : 'website' ?>" />
+	<meta property="og:locale" content="<?php bloginfo( 'language' ) ?>">
+	<meta property="og:site_name" content="<?php bloginfo( 'name' ) ?>">
+<?php
+}
+add_action('wp_head', 'get_og_protocol', 2);
+
+
+/**
  * UPDATE WORDPRESS LOGIN LOGO DARK
  */
 function wp_custom_logo_in_login() { ?>
