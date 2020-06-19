@@ -6,7 +6,7 @@
   }
 
   .search-field {
-    border: 1px solid #dedede;
+    border: 1px solid $default-border-color;
     padding: 10px 15px;
     font-size: 15px;
     width: 100%;
@@ -18,9 +18,9 @@
   }
 
   .search-submit {
-    background: #ffffff;
+    background: $bg-base;
     border: none;
-    color: $color-dark;
+    color: $color-base;
     display: inline-block;
     padding: 9px;
     top: 1px;

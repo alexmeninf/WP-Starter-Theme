@@ -6,8 +6,8 @@
 		<div class="row">
 			<div class="col-12 text-center py-5">
 				<h1>404</h1>
-				<p>Página não encontrada.</p>
-				<a href="<?php bloginfo('url') ?>" class="btn btn-primary">Início</a>
+				<p>Desculpe, mas parece que a página que você acessou não existe ou pode ter sido removida.</p>
+				<a href="<?php bloginfo('url') ?>" class="btn btn-primary">Voltar ao Início</a>
 			</div>
 		</div>
 	</div>

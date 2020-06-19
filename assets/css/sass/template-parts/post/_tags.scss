@@ -1,10 +1,14 @@
 .single-tags {
-  margin-top: 50px;
+  margin-top: $spacing-content;
 
   ul {
     list-style: none;
     margin-bottom: 0;
-    padding-left: 15px;
+    padding-left: 0;
+
+    @include media(sm) {
+      padding-left: 15px;
+    }
   }
 
   li {

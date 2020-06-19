@@ -1,10 +1,10 @@
 .pagination-posts {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 0;
-	
+	padding: $spacing-small-content 0;
+
 	[class*=nav-] {
-		background: #fff;
+		background: $bg-base;
 		border: 1px solid $color-default;
 		color: $color-default;
 		padding: 6px 20px;
@@ -21,7 +21,7 @@
 	}
 
 	.nav-previous,
-	.nav-next  {
+	.nav-next {
 		text-decoration: none;
 	}
 

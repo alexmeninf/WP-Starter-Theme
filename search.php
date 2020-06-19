@@ -3,7 +3,7 @@ get_header();
 
 $search = get_search_query();
 
-if (isset($search) && $search != '') {
+if ( isset($search) && $search != '' ) {
   $search_post_type = array('post');
   $args_total_posts = array(
     'post_type'      => $search_post_type,
@@ -11,6 +11,7 @@ if (isset($search) && $search != '') {
     's'              => $search,
     '_meta_or_title' => $search
   ); // total posts search
+
   $posts_total    = new WP_Query($args_total_posts);
   $posts_count    = $posts_total->post_count; // total de posts
   $posts_per_page = 9;
@@ -33,13 +34,13 @@ if (isset($search) && $search != '') {
 <section>
   <div class="container">
     <?php
-    if (isset($search) && $search != '') :
+    if ( isset($search) && $search != '' ) :
 
-      if ($query_search->have_posts()) : ?>
+      if ( $query_search->have_posts() ) : ?>
 
         <div class="row">
           <div class="col-md-12">
-            <h2 class="title-search">Resultados encontrados com '<?= $search ?>'</h2>
+            <h2 class="title-search">Resultados relacionados com '<?= $search ?>'</h2>
             <p><?= $posts_count ?> resultados encontrados.</p>
             <hr>
           </div>
@@ -48,7 +49,7 @@ if (isset($search) && $search != '') {
         <div class="row">
           <?php
           /*----------  Loop  ----------*/
-          while ($query_search->have_posts()) :
+          while ( $query_search->have_posts() ) :
             $query_search->the_post(); ?>
 
             <?php get_template_part('template-parts/post/content-post') ?>

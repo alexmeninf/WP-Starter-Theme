@@ -1,15 +1,15 @@
 .share-post {
 	justify-content: space-between;
-	margin-top: 20px;
-	border-bottom: 1px solid #dedede;
-	padding-bottom: 50px;
-	
+	margin-top: $spacing-small-content;
+	border-bottom: 1px solid $default-border-color;
+	padding-bottom: $spacing-content;
+
 	ul {
-		  display: flex;
-		  flex-wrap: wrap;
-		  list-style: none;
-		  margin: 0;
-		  padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
 		li {
 			&:not(:last-child) {
@@ -21,11 +21,11 @@
 				border: 1px solid;
 				color: $color-default;
 				display: block;
-				font-size: 18px;
-				height: 32px;
-				line-height: 32px;
+				font-size: 1.125em;
+				height: 2em;
+				line-height: 2em;
 				text-align: center;
-				width: 32px;
+				width: 2em;
 				@extend %transition;
 
 				&:hover {

@@ -1,33 +1,34 @@
-$color-titles: #171717;
-
+@import 'author';
 @import 'categories';
 @import 'pagination-post';
 @import 'share-post';
 @import 'tags';
 
+
 .post-single {
-  padding: 100px 0;
 
   .single-image {
-    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.37);
+    border-radius: $border-radius-img;
     display: block;
-    margin: 0 auto 30px;
+    margin: 0 auto $spacing-content;
     overflow: hidden;
   }
 
   .pub-date {
-    color: lighten($color-titles, 30%);
-    font-size: 14px;
+    color: lighten($color-base, 30%);
+    font-size: 0.875em;
   }
 
   .title {
-    color: $color-titles;
-    font-size: 40px;
+    color: $color-base;
+    font-size: 2.5em;
     margin: 0;
   }
 }
 
 .content-single {
+  @extend %default-format-content-post;
 
   p:not(:last-child),
   div,
@@ -35,21 +36,17 @@ $color-titles: #171717;
   img,
   figure,
   ul {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   li:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
 
   p,
   li,
   table {
-    font-size: 18px;
-    line-height: 1.9;
-    color: #383838;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
+    @extend %default-format-content-post;
   }
 
   a {
@@ -59,11 +56,11 @@ $color-titles: #171717;
 
   b,
   strong {
-    font-weight: 700;
+    font-weight: bold;
   }
 
   img {
-    border-radius: 8px;
+    border-radius: $border-radius-img;
     width: 100%;
     height: auto;
     transition: .3s all;
@@ -83,23 +80,29 @@ $color-titles: #171717;
 }
 
 .comments {
-  border-top: 1px solid #dedede;
-  padding-top: 50px;
+  border-top: 1px solid $default-border-color;
+  padding-top: $spacing-content;
   margin-top: -1px;
 
   h2 {
-    font-size: 32px;
+    font-size: 2em;
   }
 }
 
 .share-post,
 .single-tags {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @include media(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
 
   span {
-    color: $color-titles;
-    font-size: 19px;
+    color: $color-base;
+    font-size: 1.25em;
     font-weight: 600;
   }
 }

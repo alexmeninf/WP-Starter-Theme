@@ -17,7 +17,7 @@ new_css('style-default', 'style.css');
 
 /*----------  Use CSS Default  ----------*/
 // use_css('animate-default');
-// use_css('bootstrap-default');
+use_css('bootstrap-default');
 // use_css('fontawesome-default');
 // use_css('lightgallery-default');
 // use_css('owl-carousel-default');
@@ -56,7 +56,7 @@ new_js('main-default', 'assets/js/main.js', true);
 // use_js('sweetalert-default');
 // use_js('tilt.js');
 // use_js('wow-default');
-use_js('main-default');
+// use_js('main-default');
 
 
 include 'inc/general.php';

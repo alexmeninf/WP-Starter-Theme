@@ -11,9 +11,21 @@ add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 /**
  * Wp head add The OpenGraph
  */
-function get_og_protocol() { ?>
-	<meta property="og:image" content="<?php echo has_post_thumbnail(get_the_ID()) ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), "full" )[0] : get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option') ?>"/>  
-	<meta property="og:title" content="<?php echo wp_title('', false); ?>"/>  
+function get_og_protocol() { 
+	$src = '';
+
+	if ( has_post_thumbnail(get_the_ID()) ) {
+
+		$src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), "full" )[0];
+
+	} elseif ( function_exists('get_field') ) {
+		
+		get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
+
+	}
+	?>
+	<meta property="og:image" content="<?php echo $src ?>"/>  
+	<meta property="og:title" content="<?php echo is_front_page() ? '' : wp_title('', false).' | '; bloginfo('name'); ?>"/>  
 	<meta property="og:url" content="<?php the_permalink() ?>" />
 	<meta property="og:type" content="<?php echo is_single() ? 'article' : 'website' ?>" />
 	<meta property="og:locale" content="<?php bloginfo( 'language' ) ?>">

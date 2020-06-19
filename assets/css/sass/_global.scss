@@ -1,7 +1,22 @@
+html,
+body {
+  background-color: $bg-base;
+  color: $color-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
 a {
   @extend %transition;
 
   &:hover {
     @extend %transition;
   }
+}
+
+
+section,
+footer {
+  padding: $default-spacing-y $default-spacing-x;
 }
