@@ -11,10 +11,7 @@
       <?php get_template_part('template-parts/sidebar/get_categories'); ?>
     </div>
 
-    <div class="widget">
-      <h2>Tags</h2>
-      <?php get_template_part('template-parts/sidebar/get_tags'); ?>
-    </div>
+    <?php get_template_part('template-parts/sidebar/get_tags'); ?>
 
     <div class="widget">
       <h2>Arquivos</h2>
