@@ -20,7 +20,7 @@ function get_og_protocol() {
 
 	} elseif ( function_exists('get_field') ) {
 		
-		get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
+		$src = get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
 
 	}
 	?>
@@ -111,6 +111,9 @@ function support_comments_facebook($order = 'footer', $num_posts = 9, $language 
 
 		<?php elseif ($order == 'footer') : ?>
 
+			<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/<?= $language ?>/sdk.js#xfbml=1&version=v7.0"></script>
+
 			<script>
 				jQuery(function() {
 					function fluidComments() {
@@ -118,7 +121,7 @@ function support_comments_facebook($order = 'footer', $num_posts = 9, $language 
 						width = $myWrap.width();
 
 						$(".fb-comments").attr("data-width", width);
-						if ($(".fb-comments > span > iframe").length == 1) FB.XFBML.parse();
+						if ($(".fb-comments iframe").length == 1) FB.XFBML.parse();
 					}
 
 					$(function () {
@@ -132,8 +135,6 @@ function support_comments_facebook($order = 'footer', $num_posts = 9, $language 
 					};
 				});
 			</script>
-			<div id="fb-root"></div>
-			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/<?= $language ?>/sdk.js#xfbml=1&version=v7.0"></script>
 		
 	<?php endif;
 	endif;

@@ -31,7 +31,7 @@ if ( isset($search) && $search != '' ) {
 ?>
 
 
-<section>
+<section class="search">
   <div class="container">
     <?php
     if ( isset($search) && $search != '' ) :
@@ -41,12 +41,13 @@ if ( isset($search) && $search != '' ) {
         <div class="row">
           <div class="col-md-12">
             <h2 class="title-search">Resultados relacionados com '<?= $search ?>'</h2>
-            <p><?= $posts_count ?> resultados encontrados.</p>
+            <?php get_search_form() ?>
+            <p class="total-results"><?= $posts_count ?> resultados encontrados.</p>
             <hr>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
           <?php
           /*----------  Loop  ----------*/
           while ( $query_search->have_posts() ) :
@@ -63,8 +64,9 @@ if ( isset($search) && $search != '' ) {
 
         <div class="row">
           <div class="col-md-12 text-center">
+            <?php get_search_form() ?>
             <div class="alert alert-warning" role="alert">
-              Nenhuma página com o nome <b><?= $search ?></b> foi encontrada.
+              Nenhuma informação com o nome <b><?= $search ?></b> foi encontrada.
             </div>
           </div>
         </div>
@@ -75,8 +77,9 @@ if ( isset($search) && $search != '' ) {
 
     <div class="row">
       <div class="col-md-12 text-center">
+        <?php get_search_form() ?>
         <div class="alert alert-danger" role="alert">
-          Nenhuma página foi encontrada, você deve digitar o que busca.
+          Nenhuma informação foi encontrada, você deve digitar o que busca.
         </div>
       </div>
     </div>
