@@ -9,10 +9,6 @@ body {
 
 a {
   @extend %transition;
-
-  &:hover {
-    @extend %transition;
-  }
 }
 
 
