@@ -1,0 +1,24 @@
+[class*="headline-"] {
+  display: block;
+  font-weight: 700;
+  letter-spacing: -0.009em;
+  line-height: 1;
+  margin-top: 30px;
+  width: 100%;
+}
+
+@each $font, $data in $fonts {
+  $sizes: map-get($data, sizes);
+
+  .headline-#{$font} {
+    @for $i from 1 through length($sizes) {
+      @if $i == 1 {
+        font-size: nth($sizes, $i);
+      } @else {
+        @include media(lg) {
+          font-size: nth($sizes, $i);
+        }
+      }
+    }
+  }
+}
