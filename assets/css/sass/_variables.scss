@@ -37,6 +37,26 @@ $grid-breakpoints: (
 ) !default;
 
 
+// Headline sizes
+// components/_headlines.scss
+$fonts: () !default;
+
+$fonts: map-merge(
+  (
+    sm: (
+      sizes: (28px, 48px)
+    ),
+    md: (
+      sizes: (36px, 64px)
+    ),
+    lg: (
+      sizes: (50px, 92px)
+    ),
+  ),
+  $fonts
+);
+
+
 @mixin media($width, $type: min, $dimension: width) {
   @if map_has_key($grid-breakpoints, $width) {
     $width: map_get($grid-breakpoints, $width);
