@@ -15,7 +15,7 @@ $default-spacing-x: 0 !default;
 
 
 // Typography
-$font-family-base:  'Open Sans' !default;
+$font-family-base:  '' !default;
 $font-size-base:    1rem !default;
 $line-height-base:  1.9;
 
@@ -47,10 +47,10 @@ $fonts: map-merge(
       sizes: (28px, 48px)
     ),
     md: (
-      sizes: (36px, 64px)
+      sizes: (36px, 62px)
     ),
     lg: (
-      sizes: (50px, 92px)
+      sizes: (50px, 74px)
     ),
   ),
   $fonts
