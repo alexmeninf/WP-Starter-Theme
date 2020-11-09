@@ -1,13 +1,13 @@
 .author-post {
   align-items: center;
   display: flex;
-  border-bottom: 1px solid $default-border-color;
+  border-bottom: 1px solid $border-color;
   padding: $spacing-small-content 0;
 
   .avatar {
     border-radius: 100%;
     margin-right: 25px;
-    border: 2px dotted $default-border-color;
+    border: 2px dotted $border-color;
     padding: 5px;
   }
 

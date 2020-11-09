@@ -1,6 +1,6 @@
 # WP Starter Theme
 
-Version: 2.0.2
+Version: 3.0.0
 
 **en-US**
 
@@ -23,7 +23,6 @@ Version: 2.0.2
 **en-US** - This theme includes:
 **pt-BR** - Este tema inclui:
 
-- [Modernizr](https://modernizr.com/) - v3.10.0
 - [jQuery](https://jquery.com/) - v3.5.0
 - [Popper](https://popper.js.org/) - v2.2.3
 - [Bootstrap](https://getbootstrap.com/) - v4.4.1
@@ -34,3 +33,4 @@ Version: 2.0.2
 - [WOW Animate Plugin](https://wowjs.uk/) - v1.3.0
 - [Just Another Parallax (Jarallax)](https://github.com/nk-o/jarallax) - 1.12.1
 - [Tilt.js](http://gijsroge.github.io/tilt.js/) - 1.2.1
+- [Smooth scroll](https://github.com/gblazex/smoothscroll-for-websites) - 1.4.10

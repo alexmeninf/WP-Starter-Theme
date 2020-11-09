@@ -102,43 +102,26 @@ function the_title_page() {
 /**
  * Support Facebook comments
  */
-function support_comments_facebook($order = 'footer', $num_posts = 9, $language = 'pt_BR') {
-	if (is_single()) :
-		if ($order == 'post') : ?>
+function support_comments_facebook($order = 'footer', $url = '') {
+	if ($url == '') {
+		$url = get_permalink();
+	}
 
-			<div class="comment-box">
-				<div class="fb-comments" data-href="<?php the_permalink() ?>" data-width="100%" data-numposts="<?= $num_posts ?>"></div>
-			</div>  
+	if ($order == 'post') : ?>
 
-		<?php elseif ($order == 'footer') : ?>
+		<style>
+			.fb_iframe_widget_fluid_desktop iframe { width: 100% !important; }
+		</style>
+		<div class="comment-box">
+			<div class="fb-comments" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
+		</div>  
 
-			<div id="fb-root"></div>
-			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/<?= $language ?>/sdk.js#xfbml=1&version=v7.0"></script>
+	<?php elseif ($order == 'footer') : ?>
 
-			<script>
-				jQuery(function() {
-					function fluidComments() {
-						var $myWrap = $(".comment-box");
-						width = $myWrap.width();
-
-						$(".fb-comments").attr("data-width", width);
-						if ($(".fb-comments iframe").length == 1) FB.XFBML.parse();
-					}
-
-					$(function () {
-						fluidComments();
-					});
-
-					var progresso;
-					window.onresize = function () {
-						clearTimeout(progresso);
-						progresso = setTimeout(fluidComments, 100);
-					};
-				});
-			</script>
-		
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0"></script>
+				
 	<?php endif;
-	endif;
 }
 
 

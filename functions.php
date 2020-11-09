@@ -41,10 +41,11 @@ new_js('popper-default', 'assets/plugins/popper.min.js', true);
 new_js('sweetalert-default', 'assets/plugins/sweetalert/sweetalert2.all.min.js', true);
 new_js('tilt.js', 'assets/plugins/tilt.js/tilt.jquery.min.js', true);
 new_js('wow-default', 'assets/plugins/wow/js/wow.min.js', true);
+new_js('smooth-scroll', 'assets/plugins/smooth-scroll.js', true);
 new_js('main-default', 'assets/js/main.js', true);
 
 /*----------  Use JS Default  ----------*/
-// use_js('jquery-default');
+use_js('jquery-default');
 // use_js('bootstrap-default');
 // use_js('jarallax');
 // use_js('jquery.mask-default');
@@ -56,7 +57,8 @@ new_js('main-default', 'assets/js/main.js', true);
 // use_js('sweetalert-default');
 // use_js('tilt.js');
 // use_js('wow-default');
-// use_js('main-default');
+use_js('smooth-scroll');
+use_js('main-default');
 
 
 include 'inc/general.php';
