@@ -59,6 +59,27 @@ add_action( 'wp_enqueue_scripts', 'wc_remove_block_library_css' );
 
 
 /**
+ * Supost Thumbnals
+*/
+add_theme_support( 'post-thumbnails' );
+
+
+/*====================================
+=            OPTIONS PAGE            =
+====================================*/
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title'  => 'Opções do site',
+		'menu_title'  => 'Opções do site',
+		'menu_slug'   => 'opcoes',
+		'capability'  => 'edit_posts',
+		'redirect'    => false
+	));
+}
+
+
+/**
  * Show the page name
  */
 function the_title_page() {
@@ -188,25 +209,4 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 			</ul>
 		</nav>
 <?php endif;
-}
-
-
-/**
- * Supost Thumbnals
-*/
-add_theme_support( 'post-thumbnails' );
-
-
-/*====================================
-=            OPTIONS PAGE            =
-====================================*/
-if( function_exists('acf_add_options_page') ) {
-
-	acf_add_options_page(array(
-		'page_title'  => 'Opções do site',
-		'menu_title'  => 'Opções do site',
-		'menu_slug'   => 'opcoes',
-		'capability'  => 'edit_posts',
-		'redirect'    => false
-	));
 }

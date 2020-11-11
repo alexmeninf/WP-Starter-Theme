@@ -1,27 +1,29 @@
 # WP Starter Theme
 
-Version: 3.0.0
+Version: 3.0.1
+Author: Alexandre Menin
+GitHub Plugin URI: [https://github.com/alexmeninf/wp-starter-theme]( "https://github.com/alexmeninf/wp-starter-theme")
 
 **en-US**
 
 - In this theme you will find the main standard WordPress pages for
   website or blog operation.
 
-- Updates will be carried out constantly to improve included plugins
-  and follow up on new versions of the WordPress platform.
+- Updates will be carried out constantly to improve the included plugins and monitor the new versions of the WordPress platform for compatibility.
 
 **pt-BR**
 
 - Neste tema você encontra as principais páginas padrão do WordPress
   para funcionamento do site ou blog.
-- As atualizações serão realizadas constatemente para melhoria de
-  plugins incluídos e acompanhamento das versões novas da plataforma
-  WordPress.
+- As atualizações serão realizadas constantemente para melhoria de plugins incluídos e acompanhamento das versões novas da plataforma WordPress para compatibilidade.
+
+# Detalhes
+
+## Classes CSS
+Encontre várias classes prontas para utilizar no seu layout em **/assets/css/sass**
 
 ## Plugins
-
-**en-US** - This theme includes:
-**pt-BR** - Este tema inclui:
+Diversos plugins para seu site em **assets/plugins**
 
 - [jQuery](https://jquery.com/) - v3.5.0
 - [Popper](https://popper.js.org/) - v2.2.3
@@ -34,3 +36,25 @@ Version: 3.0.0
 - [Just Another Parallax (Jarallax)](https://github.com/nk-o/jarallax) - 1.12.1
 - [Tilt.js](http://gijsroge.github.io/tilt.js/) - 1.2.1
 - [Smooth scroll](https://github.com/gblazex/smoothscroll-for-websites) - 1.4.10
+
+
+
+## Imagens
+Tenha em mãos alguns icones e imagens já baixados em **assets/img**
+
+## Funções PHP
+Utilize funções integradas ao Wordpress em **inc/general.php**
+
+Funções que você pode utilizar no seu projeto:
+- the_title_page()
+- support_comments_facebook()
+- get_pagination()
+
+## Partes do template
+Utilize a pasta para manter organizada suas páginas, separando as sessões em **template-parts**
+
+## WordPress
+Páginas totalmente integradas com o WordPress na raiz do projeto.
+
+## Páginas Customizadas
+Utiliza o arquivo **template-default.php** como base para criar outras páginas para seu projeto.

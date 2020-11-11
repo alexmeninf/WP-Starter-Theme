@@ -42,6 +42,7 @@ p {
   }
 }
 
+// Espaço entre as sessões
 .spacing {
   padding: ($default-spacing-y / 2) $default-spacing-x;
 
@@ -50,7 +51,7 @@ p {
   }
 }
 
-// Section 100% in viewport
+// Deixar a sessão completa na tela
 .full {
   align-items: center;
   display: flex;

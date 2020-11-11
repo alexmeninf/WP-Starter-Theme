@@ -14,13 +14,13 @@ $default-spacing-x: 0 !default;
 // Typography
 $font-family-base:  '' !default;
 $font-size-base:    1rem !default;
-$line-height-base:  1.9;
+$line-height-base:  1.6;
 
 // Border radius
-$border-radius:     10px !default;
+$border-radius:     20px !default;
 
 // Border color
-$border-color:  #dedede !default;
+$border-color:  #d4d4d7 !default;
 
 // Single post
 $spacing-content:         50px !default;
@@ -44,13 +44,13 @@ $fonts: () !default;
 $fonts: map-merge(
   (
     sm: (
-      sizes: (28px, 48px)
+      sizes: (24px, 32px)
     ),
     md: (
-      sizes: (36px, 62px)
+      sizes: (32px, 48px)
     ),
     lg: (
-      sizes: (50px, 72px)
+      sizes: (48px, 64px)
     ),
   ),
   $fonts
@@ -95,7 +95,6 @@ $fonts: map-merge(
 %default-format-content-post {
   font-size: 1.125em;
 }
-
 
 %transition {
   -webkit-transition: all .3s ease-in;

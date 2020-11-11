@@ -1,16 +1,16 @@
 <?php get_header(); ?>
 
 
-<section class="spacing full">
+<section class="spacing full" style="background-image:url(<?= THEMEROOT ?>/assets/img/wp-starter-theme.jpg);background-size:cover;">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center pb-4" style="border-bottom: 1px solid #dedede">
+      <div class="col-12 text-center pb-4" style="border-bottom: 1px solid #dedede52">
         <h1 class="headline-lg">Bem-vindo ao <br>WP Starter Theme!</h1>
-        <p style="color:#444">desenvolvido por Menin</p>
-        <p style="color:#999">Versão 3.0.0</p>
+        <p class="text-white">Desenvolvido por Menin</p>
+        <p style="color:#d3d3d3">Versão 3.0.1</p>
       </div>
       <div class="col-12 text-center mt-4">
-        <a href="#features">Saiba mais</a>
+        <a href="#features" style="color:#000 !important">Saiba mais</a>
       </div>
     </div>
   </div>
@@ -24,16 +24,52 @@
     <div class="col-12 mt-4">
         <h2>Classes CSS</h2>
         <p>Encontre várias classes prontas para utilizar no seu layout em <b>/assets/css/sass</b></p>
+        <p style="color:#888"><b>Novas classes v3.0.1:</b></p>
+
+        <ul>
+          <li>Inputs
+            <ul>
+              <li>.material-form <i>(parent)</i></li>
+              <li>.standard-basic</li>
+              <li>.outlined-basic</li>
+              <li>.translucent-form</li>
+            </ul>
+          </li>
+          <li>
+            Espaçamento de sessão
+            <ul>
+              <li>.spacing</li>
+              <li>.full</li>
+            </ul>
+          </li>
+          <li>Botões 
+            <ul>
+              <li>.btn</li>
+            </ul>
+          </li>
+          <li>Títulos
+            <ul>
+              <li>.headline-sm</li>
+              <li>.headline-md</li>
+              <li>.headline-lg</li>
+            </ul>
+          </li>
+        </ul>
       </div>
 
       <div class="col-12 mt-4">
         <h2>Plugins</h2>
         <p>Diversos plugins para seu site em <b>assets/plugins</b></p>
+        <p style="color:#888"><b>Novo plugin v3.0.0:</b></p>
+        <ul>
+          <li>Smooth Scroll</li>
+        </ul>
       </div>
 
       <div class="col-12 mt-4">
         <h2>Imagens</h2>
         <p>Tenha em mãos alguns icones e imagens já baixados em <b>assets/img</b></p>
+        <p style="color:#888"><b>Novos icones adicionados v3.0.0</b></p>
       </div>
 
       <div class="col-12 mt-4">

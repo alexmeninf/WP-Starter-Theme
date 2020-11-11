@@ -1,3 +1,10 @@
+@import "template-parts/404";
+@import "template-parts/footer";
+
+
+// // Navigation
+// @import 'template-parts/navigation';
+
 // // Post
 // @import 'template-parts/post/author';
 // @import 'template-parts/post/categories';
@@ -15,13 +22,9 @@
 // @import 'template-parts/sidebar/tags';
 
 
-// Front Page
+// // Front Page
 // @import 'template-parts/front-page/';
 
 
-// Pages
+// // Pages
 // @import 'template-parts/pages/';
-
-
-// Navigation
-// @import 'template-parts/navigation';
