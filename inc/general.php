@@ -134,7 +134,7 @@ function support_comments_facebook($order = 'footer', $url = '') {
 			.fb_iframe_widget_fluid_desktop iframe { width: 100% !important; }
 		</style>
 		<div class="comment-box">
-			<div class="fb-comments" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
+			<div class="fb-comments" data-order-by="reverse_time" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
 		</div>  
 
 	<?php elseif ($order == 'footer') : ?>
