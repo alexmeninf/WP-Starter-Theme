@@ -1,0 +1,19 @@
+.owl-theme {
+  .owl-nav [class*="owl-"] {
+    background-color: rgba(#000, .34);
+    color: rgba(255, 255, 255, 0.741) !important;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+  }
+
+  button.owl-prev {
+    left: 15px;
+  }
+
+  button.owl-next {
+    right: 15px;
+  }
+}
