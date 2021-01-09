@@ -39,7 +39,8 @@ $input-space-x: 13px;
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0px 1000px $bg-form-color inset;
+       -webkit-box-shadow: 0 0 0px 1000px $bg-form-color inset !important;
+      -webkit-text-fill-color: $color-text-form !important;
     }
 
     &:hover {
