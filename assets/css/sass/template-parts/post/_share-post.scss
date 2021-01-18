@@ -1,8 +1,8 @@
 .share-post {
 	justify-content: space-between;
-	margin-top: $spacing-small-content;
+	margin-top: ($default-spacing-y / 4);
 	border-bottom: 1px solid $border-color;
-	padding-bottom: $spacing-content;
+	padding-bottom: $default-spacing-y / 2;
 
 	ul {
 		display: flex;

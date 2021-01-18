@@ -7,7 +7,7 @@
       <div class="col-12 text-center pb-4" style="border-bottom: 1px solid #dedede52">
         <h1 class="headline-lg">Bem-vindo ao <br>WP Starter Theme!</h1>
         <p class="text-white" style="text-shadow: 2px 1px 4px #4040406b;">Desenvolvido por Menin</p>
-        <p style="color:#a5a5a5;">Versão 3.0.2</p>
+        <p style="color:#a5a5a5;">Versão 3.1.0</p>
       </div>
       <div class="col-12 text-center mt-4">
         <a href="#features" style="color:#000 !important">Saiba mais</a>
@@ -21,7 +21,7 @@
   <div class="container">
     <div class="row">
       
-    <div class="col-12 mt-4">
+      <div class="col-12 mt-4">
         <h2>Classes CSS</h2>
         <p>Encontre várias classes prontas para utilizar no seu layout em <b>/assets/css/sass</b></p>
         <p style="color:#888"><b>Novas classes v3.0.1:</b></p>
@@ -90,6 +90,7 @@
       <div class="col-12 mt-4">
         <h2>Páginas Customizadas</h2>
         <p>Utiliza o arquivo <b>template-default.php</b>, como base para criar outras páginas para seu projeto.</p>
+        <p>v3.1.0 Agora você pode iniciar uma nova sessão com o comando inserido nela, verifique no arquivo.</p>
       </div>
     </div>
   </div>

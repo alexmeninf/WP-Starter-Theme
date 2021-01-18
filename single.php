@@ -5,7 +5,7 @@
 <section class="post-single spacing full">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+      <main class="col-lg-8">
         <article>
           
           <h2 class="title"><?php the_title(); ?></h2>
@@ -39,7 +39,7 @@
           </div>
 
         </article>
-      </div> <!-- /.col-lg-8 -->
+      </main> <!-- /.col-lg-8 -->
       
       <?php get_sidebar() ?>
     </div> <!-- /.row -->

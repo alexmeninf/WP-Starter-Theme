@@ -12,6 +12,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <!-- Página aqui -->
 
+<!-- Linha de sessão padrão. Utilize: Ctrl + space! -->
+section.spacing>.container>.row.justify-content.align-items>.col-12|c
+
 
 <?php 
 endwhile; endif; 

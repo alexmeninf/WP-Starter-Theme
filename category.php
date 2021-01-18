@@ -11,11 +11,11 @@ $pages_count    = ceil($posts_count / $posts_per_page);
 $current_page   = ( isset($_GET['pg']) && $_GET['pg'] > 1 && $_GET['pg'] <= $pages_count ) ? $_GET['pg'] : 1;
 
 $args = array(
-  'post_type' => 'post', 
-  'category_name' => $cat->slug, 
+  'post_type'      => 'post', 
+  'category_name'  => $cat->slug, 
   'posts_per_page' => $posts_per_page, 
-  'order' => 'DESC',
-  'paged' => $current_page
+  'order'          => 'DESC',
+  'paged'          => $current_page
 );
 $query = new WP_Query($args);
 ?>

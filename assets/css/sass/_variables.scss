@@ -1,11 +1,9 @@
 // Colors
-$color-default:  #4385e7 !default;
-$color-dark:     #000000 !default;
-$color-light:    #fff !default;
+$color-default:#6143e7 !default;
 
 // Default colors on the body
-$color-base:  $color-dark;
-$bg-base:     $color-light;
+$color-base:  $black;
+$bg-base:     unset;
 
 // spacing between sections
 $default-spacing-y: 100px !default;
@@ -13,29 +11,6 @@ $default-spacing-x: 0 !default;
 
 // Typography
 $font-family-base:  '' !default;
-$font-size-base:    1rem !default;
-$line-height-base:  1.6;
-
-// Border radius
-$border-radius:     20px !default;
-
-// Border color
-$border-color:  #d4d4d7 !default;
-
-// Single post
-$spacing-content:         50px !default;
-$spacing-small-content:   20px !default;
-
-
-// Media querie
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-
 
 // Headline sizes
 // components/_headlines.scss
@@ -50,7 +25,7 @@ $fonts: map-merge(
       sizes: (32px, 48px)
     ),
     lg: (
-      sizes: (48px, 64px)
+      sizes: (48px, 60px)
     ),
   ),
   $fonts
@@ -89,11 +64,6 @@ $fonts: map-merge(
 
     color: $color;
   }
-}
-
-// single page
-%default-format-content-post {
-  font-size: 1.125em;
 }
 
 %transition {

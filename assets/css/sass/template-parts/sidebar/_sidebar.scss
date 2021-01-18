@@ -1,11 +1,11 @@
 .widget {
   &:not(:last-child) {
-    margin-bottom: $spacing-content;
+    margin-bottom: $default-spacing-y / 2;
   }
 
   &:first-child {
     @include media(lg, max) {
-      margin-top: $spacing-content;
+      margin-top: $default-spacing-y / 2;
     }
   }
 

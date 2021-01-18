@@ -8,7 +8,10 @@ require_once('inc/_framework/framework.php');
 # =================================
 /*----------  New CSS Default  ----------*/
 new_css('animate-default', 'assets/plugins/wow/css/animate.css');
-new_css('bootstrap-default', 'assets/css/bootstrap/bootstrap.css');
+new_css('bootstrap-grid', 'assets/css/bootstrap/bootstrap-grid.css');
+new_css('bootstrap-reboot', 'assets/css/bootstrap/bootstrap-reboot.css');
+new_css('bootstrap-utilities', 'assets/css/bootstrap/bootstrap-utilities.css');
+new_css('bootstrap', 'assets/css/bootstrap/bootstrap.css');
 new_css('fontawesome-default', 'assets/plugins/fontawesome/css/all.min.css');
 new_css('lightgallery-default', 'assets/plugins/lightgallery/css/lightgallery.min.css');
 new_css('owl-carousel-default', 'assets/plugins/owl-carousel/css/owl.carousel.min.css');
@@ -17,7 +20,10 @@ new_css('style-default', 'style.css');
 
 /*----------  Use CSS Default  ----------*/
 // use_css('animate-default');
-use_css('bootstrap-default');
+// use_css('bootstrap-grid');
+// use_css('bootstrap-reboot');
+// use_css('bootstrap-utilities');
+use_css('bootstrap');
 // use_css('fontawesome-default');
 // use_css('lightgallery-default');
 // use_css('owl-carousel-default');
@@ -35,7 +41,6 @@ new_js('jarallax', 'assets/plugins/jarallax/jarallax.min.js', true);
 new_js('jquery.mask-default', 'assets/plugins/jquery-mask/js/jquery.mask.min.js', true);
 new_js('lazyload-default', 'assets/plugins/lazyload.min.js', true);
 new_js('lightgallery-default', 'assets/plugins/lightgallery/js/lightgallery.min.js', true);
-new_js('modernizr-default', 'assets/plugins/jquery/modernizr.min.js', true);
 new_js('owl-carousel-default', 'assets/plugins/owl-carousel/js/owl.carousel.min.js', true);
 new_js('popper-default', 'assets/plugins/popper.min.js', true);
 new_js('sweetalert-default', 'assets/plugins/sweetalert/sweetalert2.all.min.js', true);
@@ -51,7 +56,6 @@ use_js('jquery-default');
 // use_js('jquery.mask-default');
 // use_js('lazyload-default');
 // use_js('lightgallery-default');
-// use_js('modernizr-default');
 // use_js('owl-carousel-default');
 // use_js('popper-default');
 // use_js('sweetalert-default');
@@ -62,3 +66,4 @@ use_js('main-default');
 
 
 include 'inc/general.php';
+include 'inc/page-details-cpl.php';

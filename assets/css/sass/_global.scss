@@ -21,8 +21,6 @@ html,
 body {
   background-color: $bg-base;
   color: $color-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
   
   @if $font-family-base != '' {
     font-family: $font-family-base;
@@ -36,10 +34,6 @@ button {
 
 p {
   font-size: 20px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 // Espaço entre as sessões

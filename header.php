@@ -9,11 +9,23 @@
 
 	<?php wp_head(); ?>
 
+	<?php 
+	// Código de incorporação de analytics
+	if ( function_exists('get_field') ) : 
+		the_field('code_analytics_head', 'options');
+	endif; ?>
+
 </head>
 <body <?php body_class() ?>>
 
+	<?php 
+	// Código após abertura do <body> para analitycs
+	if ( function_exists('get_field') )
+		the_field('code_analytics_after_body', 'options');
+	?>
 
-<?php 
-if ( ! (is_front_page() || is_home()) ) 
-	get_template_part('template-parts/navigation/navbar');
-?>
+	<?php 
+	// Título das páginas
+	if ( ! (is_front_page() || is_home()) ) 
+		get_template_part('template-parts/navigation/navbar');
+	?>

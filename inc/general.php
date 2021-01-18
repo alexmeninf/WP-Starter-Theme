@@ -17,11 +17,16 @@ function get_og_protocol() {
 	if ( has_post_thumbnail(get_the_ID()) ) {
 
 		$src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), "full" )[0];
-
+		
 	} elseif ( function_exists('get_field') ) {
 		
-		$src = get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
+		if (get_field('og_image', 'options')) {
+			$src = get_field('og_image', 'options');
 
+		} elseif (get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option')) {
+			$src = get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
+
+		}
 	}
 	?>
 	<meta property="og:image" content="<?php echo $src ?>"/>  

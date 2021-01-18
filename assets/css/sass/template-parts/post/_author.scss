@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   border-bottom: 1px solid $border-color;
-  padding: $spacing-small-content 0;
+  padding: ($default-spacing-y / 4) 0;
 
   .avatar {
     border-radius: 100%;

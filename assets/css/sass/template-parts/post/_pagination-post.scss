@@ -1,7 +1,7 @@
 .pagination-posts {
 	display: flex;
 	justify-content: space-between;
-	padding: $spacing-small-content 0;
+	padding: ($default-spacing-y / 4) 0;
 
 	[class*=nav-] {
 		background: $bg-base;

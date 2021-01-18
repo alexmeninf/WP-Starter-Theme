@@ -1,5 +1,6 @@
 .btn {
   border: none;
+  border-radius: $border-radius;
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
@@ -9,5 +10,5 @@
   user-select: none;
 
   // aplique o background, cor e hover aqui abaixo
-  @include buttonColor($color-default, $color-light, 'darken', 10%);
+  @include buttonColor($color-default, $white, 'darken', 10%);
 }
