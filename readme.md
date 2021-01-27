@@ -26,7 +26,7 @@ Encontre várias classes prontas para utilizar no seu layout em **/assets/css/sa
 Diversos plugins para seu site em **assets/plugins**
 
 - [jQuery](https://jquery.com/) - v3.5.0
-- [Popper](https://popper.js.org/) - v2.2.3
+- [Popper](https://popper.js.org/) - v2.5.4
 - [Bootstrap](https://getbootstrap.com/) - v5.0 Beta
 - [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) - v2.3.4
 - [Font Awesome Pro](https://fontawesome.com) - v5.14.0

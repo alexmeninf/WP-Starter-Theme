@@ -51,13 +51,13 @@ new_js('main-default', 'assets/js/main.js', true);
 
 /*----------  Use JS Default  ----------*/
 use_js('jquery-default');
+// use_js('popper-default');
 // use_js('bootstrap-default');
 // use_js('jarallax');
 // use_js('jquery.mask-default');
 // use_js('lazyload-default');
 // use_js('lightgallery-default');
 // use_js('owl-carousel-default');
-// use_js('popper-default');
 // use_js('sweetalert-default');
 // use_js('tilt.js');
 // use_js('wow-default');

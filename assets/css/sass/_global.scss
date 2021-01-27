@@ -21,10 +21,6 @@ html,
 body {
   background-color: $bg-base;
   color: $color-base;
-  
-  @if $font-family-base != '' {
-    font-family: $font-family-base;
-  }
 }
 
 a,
