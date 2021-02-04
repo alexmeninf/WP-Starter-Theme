@@ -63,6 +63,17 @@ $fonts: map-merge(
   }
 }
 
+@mixin pseudo($zIndex: 0) {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $zIndex;
+}
+
 %transition {
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
