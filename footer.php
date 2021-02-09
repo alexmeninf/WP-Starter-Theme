@@ -6,10 +6,11 @@
 			</div>
 
 			<div class="col-lg-6 text-center text-lg-end">
-				<p>Um desenvolvimento <a href="https://inova.com.br" target="_blank" rel="noopener" title="iNova">
-						<img
-							src="https://comet-space.nyc3.digitaloceanspaces.com/assets/default/logo-inova-pink.png"
-							alt="Inova" height="28">
+				<p>Um desenvolvimento <a href="https://inovany.com.br" target="_blank" rel="noopener" title="iNova">
+					<img src="https://comet-space.nyc3.digitaloceanspaces.com/assets/default/logo-inova-white.png" alt="Inova" height="28">	
+					</a>
+					<a href="https://bluelizard.com.br" target="_blank" rel="noopener" title="Blue Lizard">
+						<img src="https://comet-space.nyc3.cdn.digitaloceanspaces.com/assets/default/logo-bluelizard-white.png" alt="Blue Lizard" height="28">	
 					</a>
 				</p>
 			</div>
