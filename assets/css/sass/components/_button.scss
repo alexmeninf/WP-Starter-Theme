@@ -8,11 +8,17 @@
   text-decoration: unset !important;
   user-select: none;
   padding: 20px 30px;
+  vertical-align: middle;
 
   @include media(md) {
     font-size: 24px;
   }
+  
+  > i {
+    font-size: 150%;
+    vertical-align: middle;  
+  }
 
   // aplique o background, cor e hover aqui abaixo
-  @include buttonColor($color-yellow, $white, "lighten", 10%);
+  @include buttonColor($color-default, $white, "lighten", 10%);
 }
