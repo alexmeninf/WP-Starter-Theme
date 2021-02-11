@@ -5,10 +5,14 @@
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  padding: .7em 1.5em;
   text-decoration: unset !important;
   user-select: none;
+  padding: 20px 30px;
+
+  @include media(md) {
+    font-size: 24px;
+  }
 
   // aplique o background, cor e hover aqui abaixo
-  @include buttonColor($color-default, $white, 'darken', 10%);
+  @include buttonColor($color-yellow, $white, "lighten", 10%);
 }
