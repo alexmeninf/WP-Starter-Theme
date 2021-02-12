@@ -30,6 +30,10 @@ button {
 
 p {
   font-size: 20px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Espaço entre as sessões
