@@ -1,0 +1,13 @@
+// Gera auxiliadores de z-index com valores de -5 até 5
+
+@for $zindex from -5 to 6 {
+  @if $zindex >= 0 {
+    .z-#{$zindex} {
+      z-index: $zindex;
+    }
+  } @else {
+    .z-n#{$zindex * -1} {
+      z-index: $zindex;
+    }
+  }
+}
