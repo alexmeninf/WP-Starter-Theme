@@ -11,8 +11,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
 <!-- Página aqui -->
-
-<!-- Linha de sessão padrão. Utilize: Ctrl + space! -->
 section.spacing>.container>.row.justify-content-center.align-items-center>.col-12|c
 
 

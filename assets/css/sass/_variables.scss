@@ -28,7 +28,15 @@ $fonts: map-merge(
   $fonts
 );
 
+/* ---- EXTENDS ---- */
+%transition {
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
 
+/* ---- MIXINS ---- */
 @mixin media($width, $type: min, $dimension: width) {
   @if map_has_key($grid-breakpoints, $width) {
     $width: map_get($grid-breakpoints, $width);
@@ -43,7 +51,7 @@ $fonts: map-merge(
   }
 }
 
-
+// components/_button.scss
 @mixin buttonColor($bg, $color, $colorHover, $amount: 10%) {
   background-color: $bg;
   color: $color;
@@ -63,8 +71,10 @@ $fonts: map-merge(
   }
 }
 
-@mixin pseudo($zIndex: 0) {
-  content: "";
+@mixin pseudo($zIndex: 0, $content: true) {
+  @if $content {
+    content: "";
+  }
   display: block;
   height: 100%;
   left: 0;
@@ -74,15 +84,8 @@ $fonts: map-merge(
   z-index: $zIndex;
 }
 
-%transition {
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-
-
 // Change placeholder style
+// components/_input.scss
 @mixin input-placeholder {
   &.placeholder { @content; }
   &:-moz-placeholder { @content; }
