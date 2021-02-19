@@ -4,16 +4,11 @@
    * Os níveis maiores do z-index devem entrar sempre nas primeiras sessões e ir
    * diminuindo até a ultima com o efeito.
    */
-  --z-index: 2;
   background-color: $bg-base;
   box-shadow: 0 57px 65px 31px rgba(14, 14, 14, 0.226);
   min-height: 100vh;
   position: relative;
-  z-index: var(--z-index);
-
-  + .layer2 {
-    z-index: calc(var(--z-index) - 1);
-  }
+  z-index: 2;
 }
 
 .layer2 {
@@ -25,6 +20,7 @@
   height: 100%;
   margin-top: -100vh;
   position: relative;
+  z-index: 1;
 
   .sticky-height {
     min-height: calc(var(--sticky-height) * 2);
