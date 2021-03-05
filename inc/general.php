@@ -8,6 +8,16 @@ function wp_after_setup_theme() {
 add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 
 
+function enable_preload_fonts() {  ?>
+		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-regular-400.woff2" as="font">
+		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-duotone-900.woff2" as="font">
+		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-light-300.woff2" as="font">
+		<link rel="preload" crossorigin="anonymous" href="<?= THEMEROOT ?>/assets/plugins/fontawesome/webfonts/fa-brands-400.woff2" as="font">
+	<?php
+} 
+add_action('wp_head', 'enable_preload_fonts', 2);
+
+
 /**
  * Wp head add The OpenGraph
  */
