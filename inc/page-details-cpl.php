@@ -34,9 +34,9 @@ function the_support_material() {
  *
  * @return void
  */
-function the_sales_button() {
+function the_sales_button($btnText = 'Quero me matricular agora!') {
   $link_sales     = get_field('link_hotmart', 'options');
-  $button         = '<a href="'. $link_sales .'" target="_blank" rel="noopener">Matricule-se agora!</a>';
+  $button         = '<a href="'. $link_sales .'" target="_blank" class="btn" rel="noopener noreferrer">'. $btnText .'</a>';
   $date           = get_field('automatically_publish', 'options');
   $specific_pages = get_field('show_on_specific_pages', 'options');
 
