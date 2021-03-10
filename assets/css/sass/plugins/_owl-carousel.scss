@@ -1,19 +1,33 @@
 .owl-theme {
-  .owl-nav [class*="owl-"] {
-    background-color: rgba(#000, .34);
-    color: rgba(255, 255, 255, 0.741) !important;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
+  .owl-nav {
+    [class*="owl-"] {
+      background-color: rgba(#000, 0.34);
+      color: rgba(255, 255, 255, 0.741) !important;
+      height: 40px;
+      width: 40px;
+
+      @include media(md) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    
+    button {
+      > span {
+        font-size: 2em;
+        line-height: 1;
+      }
+    }
   }
 
-  button.owl-prev {
-    left: 15px;
-  }
+  @include media(md) {
+    button.owl-prev {
+      left: -52px;
+    }
 
-  button.owl-next {
-    right: 15px;
+    button.owl-next {
+      right: -52px;
+    }
   }
 }
