@@ -12,21 +12,19 @@ function the_support_material() {
   $date   = get_field('publication_data');
 
   if ( $link ) : 
-    $link_url = $link['url'];
-    $link_title = $link['title'] ? $link['title'] : 'Material de apoio';
+    $link_url    = $link['url'];
+    $link_title  = $link['title'] ? $link['title'] : 'Material de apoio';
     $link_target = $link['target'] ? $link['target'] : '_blank'; 
     
-    if (is_published($date)) : ?>
-
-      <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-
-    <?php else : ?>
-
-      <a class="btn" href="javascript:void(0);">Material em breve</a>
+    if (is_published($date)) : 
+      if (get_field('enable_download')) : ?>
+        <a class="btn" href="<?php echo get_bloginfo('url') . '/download.php?file=' . esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
+      <?php else: ?>
+        <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
   <?php endif;
+    endif;
   endif;
 }
-
 
 /**
  * the_sales_button
