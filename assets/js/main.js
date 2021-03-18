@@ -135,6 +135,6 @@ jQuery(function () {
   }
 
   smoothClick();
-  // drawerMobile();
+  drawerMobile();
   // fixedMenu();
 });

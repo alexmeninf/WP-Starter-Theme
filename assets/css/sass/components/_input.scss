@@ -103,7 +103,7 @@ $input-space-x: 13px;
   input:not([type="radio"]):not([type="checkbox"]),
   select,
   textarea {
-    background-color: rgba(213, 213, 213, 0.149);
+    background-color: rgba(213, 213, 213, 0.25);
     border-bottom: 1px solid $border-color;
 
     &:hover {
@@ -154,7 +154,7 @@ $input-space-x: 13px;
   textarea {
     @extend %input;
     border-radius: 4px;
-    background-color: rgba(213, 213, 213, 0.149);
+    background-color: rgba(213, 213, 213, 0.25);
     margin-bottom: 1rem;
     padding: $input-space-y $input-space-x;
 
@@ -166,6 +166,19 @@ $input-space-x: 13px;
   textarea {
     max-height: 200px;
     min-height: 52px;
+  }
+}
+
+.input-light {
+  input,
+  textarea,
+  select {
+    color: $white;
+
+    @include input-placeholder {
+      color: $white !important;
+      opacity: 0.5;
+    }
   }
 }
 

@@ -23,7 +23,7 @@ button {
 }
 
 p {
-  font-size: calc(1rem + 0.3vw);
+  font-size: calc(1rem + 0.2vw);
 
   &:last-child {
     margin-bottom: 0;
@@ -37,4 +37,8 @@ p {
   @include media(lg) {
     padding: $default-spacing-y $default-spacing-x;
   }
+}
+
+.text-default {
+  color: $color-default !important;
 }

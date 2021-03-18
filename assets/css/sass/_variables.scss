@@ -5,19 +5,6 @@ $color-default: #6143e7 !default;
 $default-spacing-y: 7.5em !default;
 $default-spacing-x: 0 !default;
 
-// Headline sizes
-// components/_headlines.scss
-$fonts: () !default;
-
-$fonts: map-merge(
-  (
-    sm: (sizes: (1.25rem)),
-    md: (sizes: (1.7rem)),
-    lg: (sizes: (2.25rem)),
-  ),
-  $fonts
-);
-
 /* ---- EXTENDS ---- */
 %transition {
   -webkit-transition: all .3s ease-in;

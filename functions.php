@@ -24,7 +24,7 @@ new_css('style-default', 'style.css');
 // use_css('bootstrap-reboot');
 // use_css('bootstrap-utilities');
 use_css('bootstrap');
-// use_css('fontawesome-default');
+use_css('fontawesome-default');
 // use_css('lightgallery-default');
 // use_css('owl-carousel-default');
 use_css('main-default');
@@ -67,7 +67,7 @@ use_js('utilities');
 // use_js('wow-default');
 use_js('smooth-scroll');
 // use_js('countdown');
-// use_js('swiped-events');
+use_js('swiped-events');
 use_js('main-default');
 
 
