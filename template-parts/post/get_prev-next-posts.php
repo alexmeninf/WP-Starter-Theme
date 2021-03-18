@@ -1,9 +1,8 @@
 <?php
 $previous = get_previous_post();
 $next     = get_next_post();
-?>
 
-<?php if (get_previous_post() || get_next_post()) : ?>
+if (get_previous_post() || get_next_post()) : ?>
   <div class="pagination-posts">
     <?php if ( get_previous_post() ) { ?>
       <a href="<?= get_the_permalink($previous) ?>" title="Ler postagem: <?= get_the_title($previous) ?>" class="nav-previous">

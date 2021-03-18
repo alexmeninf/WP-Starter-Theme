@@ -1,9 +1,9 @@
 [class*="headline-"] {
   display: block;
   font-weight: 700;
-  letter-spacing: -0.009em;
+  letter-spacing: -0.010em;
   line-height: 1;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.7rem;
   width: 100%;
 }
 
@@ -13,10 +13,10 @@
   .headline-#{$font} {
     @for $i from 1 through length($sizes) {
       @if $i == 1 {
-        font-size: nth($sizes, $i);
+        font-size: calc(#{nth($sizes, $i)} + 1.5vw);
       } @else {
         @include media(lg) {
-          font-size: nth($sizes, $i);
+          font-size: calc(#{nth($sizes, $i)} + 1.5vw);
         }
       }
     }

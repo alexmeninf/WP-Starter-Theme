@@ -5,7 +5,7 @@
 
 // Color system
 
-$white: #fff !default;
+$white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -35,7 +35,7 @@ $blue: #1e6dff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
+$red: #E53935 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #0eb847 !default;
@@ -208,10 +208,10 @@ $escaped-characters: (
 $enable-caret: true !default;
 $enable-rounded: true !default;
 $enable-shadows: true !default;
-$enable-gradients: true !default;
+$enable-gradients: false !default;
 $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
-$enable-smooth-scroll: true !default;
+$enable-smooth-scroll: false !default;
 $enable-grid-classes: true !default;
 $enable-button-pointers: true !default;
 $enable-rfs: true !default;
@@ -365,7 +365,7 @@ $border-radius-pill: 50rem !default;
 
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.45) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 
 $component-active-color: $white !default;
@@ -401,8 +401,8 @@ $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
-$font-family-base: var(--bootstrap-#{$variable-prefix}font-sans-serif) !default;
-$font-family-code: var(--bootstrap-#{$variable-prefix}font-monospace) !default;
+$font-family-base: var(--#{$variable-prefix}font-sans-serif) !default;
+$font-family-code: var(--#{$variable-prefix}font-monospace) !default;
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text

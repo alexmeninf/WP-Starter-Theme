@@ -98,35 +98,35 @@ if( function_exists('acf_add_options_page') ) {
  * Show the page name
  */
 function the_title_page() {
-	if (is_404()) {
+	if ( is_404() ) {
 		echo 'Página não encontrada';
 
-	} elseif (is_tag()) {
+	} elseif ( is_tag() ) {
 		single_tag_title();
 		
-	} elseif (is_category()) {
+	} elseif ( is_category() ) {
 		single_cat_title();
 
-	} elseif (is_tax()) {
+	} elseif ( is_tax() ) {
 		$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 		echo $term->name;
 
-	} elseif (is_day()) {
+	} elseif ( is_day() ) {
 		echo "Arquivo de " . get_the_time('j \d\e F \d\e Y');
 
-	} elseif (is_month()) {
+	} elseif ( is_month() ) {
 		echo "Arquivo de " . get_the_time('F \d\e Y');
 
-	} elseif (is_year()) {
+	} elseif ( is_year() ) {
 		echo "Arquivo de " . get_the_time('Y');
 
-	} elseif (is_author()) {
+	} elseif ( is_author() ) {
 		echo "Arquivo do autor";
 
 	} elseif (isset($_GET['p']) && !empty($_GET['p'])) {
 		echo "Arquivo do blog";
 
-	} elseif (is_search()) {
+	} elseif ( is_search() ) {
 		echo "Resultados da pesquisa";
 		
 	} else {
@@ -155,7 +155,7 @@ function support_comments_facebook($order = 'footer', $url = '') {
 	<?php elseif ($order == 'footer') : ?>
 
 		<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0"></script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0" nonce="OyPqQGQM"></script>
 				
 	<?php endif;
 }
@@ -168,29 +168,29 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 	wp_reset_query();
 	$args = '';
 
-	if (is_search()) {
+	if ( is_search() ) {
 		$args .= 's=' . get_search_query() . '&';
 		$url = get_bloginfo('url');
 
-	} elseif (is_category()) {
+	} elseif ( is_category() ) {
 		$url = get_category_link(get_queried_object()->term_id);
 
-	} elseif(is_tax()) {
+	} elseif ( is_tax() ) {
 		$url = get_term_link(get_queried_object()->term_id);
 		
-	} elseif (is_tag()) {
+	} elseif ( is_tag() ) {
 		$url = get_tag_link(get_queried_object()->term_id);
 	
-	} elseif (is_day()) {
+	} elseif ( is_day() ) {
 		$url = get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'));
 	
-	} elseif (is_month()) {
+	} elseif ( is_month() ) {
 		$url = get_month_link(get_the_time('Y'), get_the_time('m'));
 	
-	} elseif (is_year()) {
+	} elseif ( is_year() ) {
 		$url = get_year_link(get_the_time('Y'));
 	
-	} elseif (is_author()) {
+	} elseif ( is_author() ) {
 		$url = get_author_posts_url(get_queried_object()->term_id);
 		
 	} else {
@@ -199,7 +199,7 @@ function get_pagination($current_page, $pages_count, $maxLinks = 2) {
 
 	$url = esc_url($url) . '?' . $args;
 	
-	if( $pages_count > 0 ) : ?>
+	if ( $pages_count > 0 ) : ?>
 		<nav aria-label="Page navigation">
 			<ul class="pagination">
 				<?php
@@ -245,14 +245,20 @@ function input($name, $id, $type, $is_required = false, $value = '') {
 	<?php elseif ($type == 'textarea') : ?>
 		<label class="form-group">
 			<textarea id="<?= $id ?>" name="<?= $id ?>"<?= $value ?> placeholder="&nbsp;" <?= $required ?>></textarea>
-			<span class="txt"><?= $name ?> <sup>*</sup></span>
+			<span class="txt">
+				<?= $name ?> 
+				<?= $is_required ? '<sup class="text-danger">*</sup>' : '' ?>
+			</span>
 			<span class="bar"></span>
 		</label>
 
 	<?php else: ?>
 		<label class="form-group">
 			<input type="<?= $type ?>" id="<?= $id ?>" name="<?= $id ?>"<?= $value ?> placeholder="&nbsp;" <?= $required ?>>
-			<span class="txt"><?= $name ?> <sup>*</sup></span>
+			<span class="txt">
+				<?= $name ?> 
+				<?= $is_required ? '<sup class="text-danger">*</sup>' : '' ?>
+			</span>
 			<span class="bar"></span>
 		</label>
 <?php

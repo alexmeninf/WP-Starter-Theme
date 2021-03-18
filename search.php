@@ -31,7 +31,7 @@ if ( isset($search) && $search != '' ) {
 ?>
 
 
-<section class="search spacing full">
+<section class="search spacing min-vh-100 d-flex align-items-center">
   <div class="container">
     <?php
     if ( isset($search) && $search != '' ) :

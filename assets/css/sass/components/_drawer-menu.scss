@@ -1,6 +1,6 @@
 .drawer-mobile {
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px) saturate(150%);
+  -webkit-backdrop-filter: blur(7px) saturate(150%);
   background: rgba(23, 23, 23, 0.63);
   height: 100%;
   left: 0;
@@ -20,8 +20,8 @@
   &.drawerClosed {
     opacity: 0;
     display: none;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
   }
 
   .close-menu {

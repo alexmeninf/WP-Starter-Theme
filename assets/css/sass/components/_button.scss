@@ -1,22 +1,18 @@
-.btn {
+.btn-theme {
   border: none;
   border-radius: $border-radius;
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
+  font-size: calc(1.2rem + 0.35vw);
   font-weight: 700;
-  text-decoration: unset !important;
+  text-decoration: unset;
   user-select: none;
-  padding: 20px 30px;
+  padding: 0.65em 1.1em;
   vertical-align: middle;
 
-  @include media(md) {
-    font-size: 24px;
-  }
-  
   > i {
     font-size: 150%;
-    vertical-align: middle;  
+    vertical-align: middle;
   }
 
   // aplique o background, cor e hover aqui abaixo

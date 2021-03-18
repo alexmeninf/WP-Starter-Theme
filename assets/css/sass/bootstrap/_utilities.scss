@@ -71,6 +71,26 @@ $utilities: map-merge(
         y: translateY(-50%),
       ),
     ),
+    "translate-hover": (
+      property: transform,
+      class: translate-hover,
+      hover: true,
+      values: (
+        xs: translateX(-0.6rem),
+        xe: translateX(0.6rem),
+        yt: translateY(-0.6rem),
+        yb: translateY(0.6rem),
+      ),
+    ),
+    "scale-hover": (
+      property: transform,
+      class: scale-hover,
+      hover: true,
+      values: (
+        in: scale(0.95),
+        out: scale(1.07),
+      ),
+    ),
     "border": (
       property: border,
       values: (
@@ -187,6 +207,7 @@ $utilities: map-merge(
       property: min-height,
       class: min-vh,
       values: (
+        50: 50vh,
         100: 100vh,
       ),
     ),
@@ -552,7 +573,7 @@ $utilities: map-merge(
       property: background-image,
       class: bg,
       values: (
-        gradient: var(--bootstrap-#{$variable-prefix}gradient),
+        gradient: var(--#{$variable-prefix}gradient),
       ),
     ),
     "white-space": (
@@ -579,7 +600,7 @@ $utilities: map-merge(
       property: font-family,
       class: font,
       values: (
-        monospace: var(--bootstrap-#{$variable-prefix}font-monospace),
+        monospace: var(--#{$variable-prefix}font-monospace),
       ),
     ),
     "user-select": (

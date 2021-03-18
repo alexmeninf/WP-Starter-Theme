@@ -10,8 +10,7 @@ get_header();
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-<!-- Página aqui -->
-section.spacing>.container>.row.justify-content-center.align-items-center>.col-12|c
+section.min-vh-100.d-flex.align-items-center.spacing>.container>.row.justify-content-center.align-items-center>.col-12|c
 
 
 <?php 

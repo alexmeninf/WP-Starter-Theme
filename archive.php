@@ -23,7 +23,7 @@ $query = new WP_Query($args);
 ?>
 
 
-<section class="full spacing">
+<section class="min-vh-100 d-flex align-items-center spacing">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">

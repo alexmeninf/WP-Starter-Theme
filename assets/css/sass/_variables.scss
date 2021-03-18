@@ -1,12 +1,8 @@
 // Colors
-$color-default:#6143e7 !default;
-
-// Default colors on the body
-$color-base:  $black;
-$bg-base:     $white;
+$color-default: #6143e7 !default;
 
 // spacing between sections
-$default-spacing-y: 100px !default;
+$default-spacing-y: 7.5em !default;
 $default-spacing-x: 0 !default;
 
 // Headline sizes
@@ -15,15 +11,9 @@ $fonts: () !default;
 
 $fonts: map-merge(
   (
-    sm: (
-      sizes: (24px, 32px)
-    ),
-    md: (
-      sizes: (32px, 48px)
-    ),
-    lg: (
-      sizes: (48px, 60px)
-    ),
+    sm: (sizes: (1.25rem)),
+    md: (sizes: (1.7rem)),
+    lg: (sizes: (2.25rem)),
   ),
   $fonts
 );
@@ -72,13 +62,12 @@ $fonts: map-merge(
 }
 
 @mixin pseudo($zIndex: 0, $content: true) {
-  @if $content {
-    content: "";
-  }
-  display: block;
+  @if $content { content: ""; }
+  bottom: 0;
   height: 100%;
   left: 0;
   position: absolute;
+  right: 0;
   top: 0;
   width: 100%;
   z-index: $zIndex;

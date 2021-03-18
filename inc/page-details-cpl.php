@@ -16,8 +16,8 @@ function the_support_material() {
     $link_title  = $link['title'] ? $link['title'] : 'Material de apoio';
     $link_target = $link['target'] ? $link['target'] : '_blank'; 
     
-    if (is_published($date)) : 
-      if (get_field('enable_download')) : ?>
+    if ( is_published($date) ) : 
+      if ( get_field('enable_download') ) : ?>
         <a class="btn" href="<?php echo get_bloginfo('url') . '/download.php?file=' . esc_url( $link_url ); ?>"><?php echo esc_html( $link_title ); ?></a>
       <?php else: ?>
         <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
@@ -32,15 +32,15 @@ function the_support_material() {
  *
  * @return void
  */
-function the_sales_button($btnText = 'Quero me matricular agora!') {
+function the_sales_button( $btnText = 'Quero me matricular agora!' ) {
   $link_sales     = get_field('link_hotmart', 'options');
   $button         = '<a href="'. $link_sales .'" target="_blank" class="btn" rel="noopener noreferrer">'. $btnText .'</a>';
   $date           = get_field('automatically_publish', 'options');
   $specific_pages = get_field('show_on_specific_pages', 'options');
 
-  if (get_field('show_btn_vendas', 'options') && $link_sales != '' && is_page($specific_pages)) : 
-    if ($date) :
-      if (is_published($date)) :
+  if ( get_field('show_btn_vendas', 'options') && $link_sales != '' && is_page($specific_pages) ) : 
+    if ( $date ) :
+      if ( is_published($date) ) :
         echo $button;
       endif;
     else : 

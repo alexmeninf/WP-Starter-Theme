@@ -4,6 +4,7 @@
  */
 
 $tags = get_tags();
+
 if ($tags) { 
   $html = '<div class="sidebar-tags">';
 

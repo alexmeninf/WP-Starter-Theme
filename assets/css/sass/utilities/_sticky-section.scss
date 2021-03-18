@@ -4,7 +4,7 @@
    * Os níveis maiores do z-index devem entrar sempre nas primeiras sessões e ir
    * diminuindo até a ultima com o efeito.
    */
-  background-color: $bg-base;
+  background-color: $body-bg;
   box-shadow: 0 57px 65px 31px rgba(14, 14, 14, 0.226);
   min-height: 100vh;
   position: relative;
@@ -16,7 +16,7 @@
    * defina o tamanho customizado da sessão
    */
   --sticky-height: 200vh;
-  background: $bg-base;
+  background: $body-bg;
   height: 100%;
   margin-top: -100vh;
   position: relative;
@@ -27,7 +27,7 @@
 
     @include media(md) {
       min-height: var(--sticky-height);
-    } 
+    }
   }
 
   .sticky-section {

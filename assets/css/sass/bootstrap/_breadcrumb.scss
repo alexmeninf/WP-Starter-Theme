@@ -19,11 +19,11 @@
       padding-right: $breadcrumb-item-padding-x;
       color: $breadcrumb-divider-color;
       content: var(
-          --bootstrap-#{$variable-prefix}breadcrumb-divider,
+          --#{$variable-prefix}breadcrumb-divider,
           escape-svg($breadcrumb-divider)
         )
         #{"/* rtl:"} var(
-          --bootstrap-#{$variable-prefix}breadcrumb-divider,
+          --#{$variable-prefix}breadcrumb-divider,
           escape-svg($breadcrumb-divider-flipped)
         ) #{"*/"};
     }

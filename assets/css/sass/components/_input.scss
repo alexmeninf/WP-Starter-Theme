@@ -1,5 +1,5 @@
-$bg-form-color: $bg-base; // Background
-$color-text-form: $color-base; // Cor do texto
+$bg-form-color: $body-bg; // Background
+$color-text-form: $body-color; // Cor do texto
 $color-focus-default: $color-default; // Cor destaque
 
 // Espaçamento
@@ -72,7 +72,7 @@ $input-space-x: 13px;
   }
 
   .txt {
-    color: lighten($color-base, 40%);
+    color: $gray-600;
     cursor: auto;
     font-size: 1em;
     font-weight: 500;
@@ -83,7 +83,7 @@ $input-space-x: 13px;
     top: 19px;
     transform-origin: 0 0;
     transition: all 0.2s ease;
-    @include user-select(none);
+    user-select: none;
   }
 
   .bar {

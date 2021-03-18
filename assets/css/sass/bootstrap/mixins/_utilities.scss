@@ -43,13 +43,25 @@
 
     $is-rtl: map-get($utility, rtl);
 
+    // Hover class
+    $is-hover: map-get($utility, hover);
+
     @if $value != null {
       @if $is-rtl == false {
         /* rtl:begin:remove */
       }
       .#{$property-class + $infix + $property-class-modifier} {
-        @each $property in $properties {
-          #{$property}: $value if($enable-important-utilities, !important, null);
+        @if $is-hover != null {
+          &:hover {
+            @each $property in $properties {
+              #{$property}: $value if($enable-important-utilities, !important, null);
+            }
+          }
+        }
+        @else {
+          @each $property in $properties {
+            #{$property}: $value if($enable-important-utilities, !important, null);
+          }
         }
       }
 

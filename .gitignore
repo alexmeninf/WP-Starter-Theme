@@ -1,5 +1,4 @@
 .sass-cache/
-*.css.map
-*.scssc"
-'C:\temp\sass'
+assets/**/*.css.map
+assets/**/*.scssc
 node_modules/

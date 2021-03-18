@@ -2,7 +2,7 @@
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 
-<section class="full spacing">
+<section class="min-vh-100 d-flex align-items-center spacing">
   <div class="container">
     <div class="row">
       <div class="col-12">
