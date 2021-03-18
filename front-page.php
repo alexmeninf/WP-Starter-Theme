@@ -7,7 +7,7 @@
       <div class="col-12 text-center pb-4" style="border-bottom: 1px solid #dedede52">
         <h1 class="headline-1">Bem-vindo ao <br>WP Starter Theme!</h1>
         <p class="text-white fs-3" style="text-shadow: 2px 1px 4px #4040406b;">Desenvolvido por Menin</p>
-        <p style="color:#a5a5a5;">Versão 3.3.1</p>
+        <p style="color:#a5a5a5;">Versão 3.3.2</p>
       </div>
 
       <div class="col-12 mt-4 text-center">
@@ -46,7 +46,12 @@
             </ul>
           </li>
 
-          <li><a href="#code-8" class="text-decoration-none fw-bold">Forms</a></li>
+          <li>
+            <a href="#code-8" class="text-decoration-none fw-bold">Forms</a>
+            <ul class="pl-4">
+              <li><a href="#code-8-1" class="text-decoration-none">Input</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
 
@@ -94,10 +99,12 @@
               <p>Utilize o botão do tema para layouts mais elaborados.</p>
               <div>
                 <a href="#!" class="btn-theme">.btn-theme</a>
+                <a href="#!" class="btn-theme">.btn-theme <i class="fal fa-chevron-double-right"></i></a>
 
                 <div class="border p-4 mt-3 bg-light">
                   <code>
-                    <span><</span>a href="#!" class="btn-theme">.btn-theme<span><</span>/a<span>></span>
+                    <span><</span>a href="#!" class="btn-theme">.btn-theme<span><</span>/a<span>></span> <br>
+                    <span><</span>a href="#!" class="btn-theme">.btn-theme <span><</span>i class="fal fa-chevron-double-right"<span>></span></i><span><</span>/a<span>></span>
                   </code>
                 </div>
               </div>
@@ -110,7 +117,7 @@
 
               <!-- scale Card -->
               <div>
-                <h4 class="mt-5" id="code-5-1">Scale inside Card</h4>
+                <h4 class="mt-5" id="code-5-1">2.1- Scale inside card</h4>
                 <p>Crie blocos animados para suas informações.</p>
                 <h5 class="text-secondary mb-3">Exemplo:</h5>
 
@@ -133,8 +140,8 @@
               
               <!-- Flip card -->
               <div>
-                <h4 class="mt-5" id="code-5-2">Flip Card</h4>
-                <p>Escoda informações e mostre apenas passando o mouse.</p>
+                <h4 class="mt-5" id="code-5-2">2.2- Flip card</h4>
+                <p>Esconda informações e mostre apenas passando o mouse.</p>
                 <h5 class="text-secondary mb-3">Exemplo:</h5>
 
                 <div class="scene-card" style="max-width:400px">
@@ -284,71 +291,71 @@
 
             <!-- inputs -->
             <div>
-              <h3>Inputs</h3>
+              <h3 id="code-8-1">1- Inputs</h3>
               <p>Inspirado no material UI, crie inputs customizadas de forma simples. Para as classes com <span class="text-danger">.material-form</span>, utilize a função criada <span class="text-danger" title="Encontre em inc/general.php">input()</span>, escrevendo assim, mesmo código.</p>
               
               <!-- input 1 -->
               <div>
-                <h4 class="mt-5">.material-form.standard-basic</h4>
+                <h4 class="mt-5">1.1- .material-form.standard-basic</h4>
                 <p>Utilize uma input simples sem borda e translucidas.</p>
                 <h5 class="text-secondary mb-3">Exemplo:</h5>
-                <div class="material-form standard-basic">
+                <form class="material-form standard-basic">
                   <?php input('Nome', 'name', 'text', true) ?>
                   <?php input('E-mail', 'email', 'email', true) ?>
                   <?php input('Mensagem', 'mensage', 'textarea', false) ?>
-                </div>
+                </form>
 
                 <div class="border p-4 bg-light">
                   <code>
-                    <span><</span>div class="material-form standard-basic"<span>></span> <br>
+                    <span><</span>form class="material-form standard-basic"<span>></span> <br>
                       &nbsp;&nbsp; <span><</span>?php input('Nome', 'name', 'text', true) ?> <br>
                       &nbsp;&nbsp; <span><</span>?php input('E-mail', 'email', 'email', true) ?> <br>
                       &nbsp;&nbsp; <span><</span>?php input('Mensagem', 'mensage', 'textarea', false) ?> <br>
-                    <span><</span>/div<span>></span>
+                    <span><</span>/form<span>></span>
                   </code>
                 </div>
               </div>
 
               <!-- input 2 -->
               <div>
-                <h4 class="mt-5">.material-form.outlined-basic</h4>
+                <h4 class="mt-5">1.2- .material-form.outlined-basic</h4>
                 <p>Input com borda e estilosa.</p>
                 <h5 class="text-secondary mb-3">Exemplo:</h5>
-                <div class="material-form outlined-basic">
+                <form class="material-form outlined-basic">
                   <?php input('Nome', 'name', 'text', true) ?>
                   <?php input('E-mail', 'email', 'email', true) ?>
                   <?php input('Mensagem', 'mensage', 'textarea', false) ?>
-                </div>
+                </form>
 
                 <div class="border p-4 bg-light">
                   <code>
-                    <span><</span>div class="material-form outlined-basic"<span>></span> <br>
+                    <span><</span>form class="material-form outlined-basic"<span>></span> <br>
                       &nbsp;&nbsp; <span><</span>?php input('Nome', 'name', 'text', true) ?> <br>
                       &nbsp;&nbsp; <span><</span>?php input('E-mail', 'email', 'email', true) ?> <br>
                       &nbsp;&nbsp; <span><</span>?php input('Mensagem', 'mensage', 'textarea', false) ?> <br>
-                    <span><</span>/div<span>></span>
+                    <span><</span>/form<span>></span>
                   </code>
                 </div>
               </div>
             
               <!-- input 3 -->
               <div>
-                <h4 class="mt-5">.translucent-form</h4>
+                <h4 class="mt-5">1.3- .translucent-form</h4>
                 <p>São inputs simples e translucidas, porém poderosas em layouts para se adaptarem a cor de fundo deixando tudo mais elegante. Utilize também em seu formulário <span class="text-danger">.input-light</span>, para fundos mais escuros.</p>
                 <h5 class="text-secondary mb-3">Exemplo:</h5>
-                <div class="translucent-form input-light bg-primary p-4">
+                <form class="translucent-form input-light bg-primary p-4 rounded">
                   <input type="text" name="name" placeholder="Nome">
                   <input type="email" name="email" placeholder="Nome">
                   <textarea name="mensage" placeholder="Mensagem"></textarea>
-                </div>
+                </form>
 
                 <div class="border p-4 bg-light mt-3">
                   <code>
-                    <span><</span>div class="translucent-form input-light bg-primary p-4"<span>></span> <br>
-                      &nbsp;&nbsp; <span><</span>?php input('Nome', 'name', 'text', true) ?> <br>
-                      &nbsp;&nbsp; <span><</span>?php input('E-mail', 'email', 'email', true) ?> <br>
-                      &nbsp;&nbsp; <span><</span>?php input('Mensagem', 'mensage', 'textarea', false) ?> <br>
-                    <span><</span>/div<span>></span>
+                    <span><</span>form class="translucent-form input-light bg-primary p-4 rounded"<span>></span><br>
+                    &nbsp;&nbsp;<span><</span>input type="text" name="name" placeholder="Nome"<span>></span><br>
+                    &nbsp;&nbsp;<span><</span>input type="email" name="email" placeholder="Nome"<span>></span><br>
+                    &nbsp;&nbsp;<span><</span>textarea name="mensage" placeholder="Mensagem"><span><</span>/textarea<span>></span><br>
+                    <span><</span>/form>
                   </code>
                 </div>
               </div>

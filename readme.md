@@ -1,6 +1,6 @@
 # WP Starter Theme
 
-Version: 3.3.1
+Version: 3.3.2
 Author: Alexandre Menin
 GitHub Plugin URI: [https://github.com/alexmeninf/wp-starter-theme]( "https://github.com/alexmeninf/wp-starter-theme")
 
