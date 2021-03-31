@@ -5,11 +5,13 @@
    * diminuindo até a ultima com o efeito.
    */
   background-color: $body-bg;
-  box-shadow: 0 57px 65px 31px rgba(14, 14, 14, 0.226);
+  box-shadow: 0 57px 65px 31px rgba(0, 0, 0, 0.426);
   min-height: 100vh;
   position: relative;
   z-index: 2;
 }
+
+.shadow-layer {box-shadow: 0 57px 65px 31px rgba(0, 0, 0, 0.426);}
 
 .layer2 {
   /* Variavel para utilizar no style inline do HTML.
