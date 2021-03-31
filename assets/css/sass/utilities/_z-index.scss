@@ -3,11 +3,11 @@
 @for $zindex from -1 to 6 {
   @if $zindex >= 0 {
     .z-#{$zindex} {
-      z-index: $zindex;
+      z-index: $zindex !important;
     }
   } @else {
     .z-n#{$zindex * -1} {
-      z-index: $zindex;
+      z-index: $zindex !important;
     }
   }
 }

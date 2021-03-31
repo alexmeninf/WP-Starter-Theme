@@ -13,7 +13,10 @@
   }
 }
 
+//
 // Combine essa classe como filha de .hover-overlay
+//
+
 .mask {
   overflow: hidden;
   background-attachment: fixed;
@@ -33,7 +36,7 @@
 
   &:hover {
     img {
-      transform: scale(1.6);
+      transform: scale(1.6) !important;
     }
   }
 }
@@ -46,7 +49,7 @@
   @extend %transition;
 
   &:hover {
-    box-shadow: $box-shadow-lg;
+    box-shadow: $box-shadow-lg !important;
   }
 }
 
