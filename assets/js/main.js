@@ -1,10 +1,4 @@
 jQuery(function () {
-
-  ////lazyload images
-  // var lazyLoadInstance = new LazyLoad({
-  //   elements_selector: ".lazy"
-  // });
-  
   
   // $("input[type=tel], .mask-phone").on("keyup", function () {
   //   if ($(this).val().length >= 15) {

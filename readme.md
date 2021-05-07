@@ -33,9 +33,10 @@ Diversos plugins para seu site em **assets/plugins**
 - [LightGallery](http://sachinchoolur.github.io/lightGallery/) - v1.6.12
 - [jQuery Mask Plugin](https://igorescobar.github.io/jQuery-Mask-Plugin/) - v1.14.16
 - [WOW Animate Plugin](https://wowjs.uk/) - v1.3.0
-- [Just Another Parallax (Jarallax)](https://github.com/nk-o/jarallax) - 1.12.1
-- [Tilt.js](http://gijsroge.github.io/tilt.js/) - 1.2.1
-- [Smooth scroll](https://github.com/gblazex/smoothscroll-for-websites) - 1.4.10
+- [Just Another Parallax (Jarallax)](https://github.com/nk-o/jarallax) - v1.12.1
+- [Tilt.js](http://gijsroge.github.io/tilt.js/) - v1.2.1
+- [Smooth scroll](https://github.com/gblazex/smoothscroll-for-websites) - v1.4.10
+- [Lazysizes](https://github.com/aFarkas/lazysizes) - v5.3.2
 
 
 
