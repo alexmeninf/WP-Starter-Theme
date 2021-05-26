@@ -288,4 +288,4 @@ function menin_widgets_init() {
     'after_title'   => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'sidebar_child_widgets_init' );
+add_action( 'widgets_init', 'menin_widgets_init' );
