@@ -5,7 +5,16 @@
 <section class="min-vh-100 d-flex align-items-center spacing">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      
+      <?php if ( is_active_sidebar( 'sidebar-2' )  ) : ?>
+        <div class="col-lg-4 widget-area" role="complementary">
+          
+          <?php dynamic_sidebar( 'sidebar-2' ); ?>
+          
+        </div>
+      <?php endif; ?>
+      
+      <div class="col-lg-<?= is_active_sidebar( 'sidebar-2' ) ? '8' : '4' ?>">
         <?php the_content(); ?>
       </div>
     </div>
