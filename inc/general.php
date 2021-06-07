@@ -8,8 +8,10 @@ function wp_after_setup_theme() {
 add_action( 'after_setup_theme', 'wp_after_setup_theme' );
 
 
-// Remove meta tag generator 
-// Vunerabilidade que mostra a versão do WP
+/*
+ * Remove meta tag generator 
+ * Vulnerabilidade que mostra a versão do WP
+ */
 remove_action('wp_head', 'wp_generator');
 
 
