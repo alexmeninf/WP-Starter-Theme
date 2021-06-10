@@ -169,69 +169,130 @@ function support_comments_facebook($order = 'footer', $url = '') {
 
 
 /**
- * Pagination in loop posts
+ * get_pagination
+ * 
+ * @version 1.1
+ *
+ * @param  mixed $current_page
+ * @param  mixed $pages_count
+ * @param  mixed $maxLinks
+ * @return void
  */
 function get_pagination($current_page, $pages_count, $maxLinks = 2) {
-	wp_reset_query();
-	$args = '';
+  wp_reset_query();
 
-	if ( is_search() ) {
-		$args .= 's=' . get_search_query() . '&';
-		$url = get_bloginfo('url');
+  $args = "?";
+  $firstRun = true;
 
-	} elseif ( is_category() ) {
-		$url = get_category_link(get_queried_object()->term_id);
+  foreach ($_GET as $key => $val) {
+    // Remove duplicate 'pg' parameter
+    $check_pg = ('pg' != $key);
 
-	} elseif ( is_tax() ) {
-		$url = get_term_link(get_queried_object()->term_id);
-		
-	} elseif ( is_tag() ) {
-		$url = get_tag_link(get_queried_object()->term_id);
-	
-	} elseif ( is_day() ) {
-		$url = get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'));
-	
-	} elseif ( is_month() ) {
-		$url = get_month_link(get_the_time('Y'), get_the_time('m'));
-	
-	} elseif ( is_year() ) {
-		$url = get_year_link(get_the_time('Y'));
-	
-	} elseif ( is_author() ) {
-		$url = get_author_posts_url(get_queried_object()->term_id);
-		
-	} else {
-		$url  = get_the_permalink(get_the_ID());
-	}
+    if ($key != $parameter) {
+      if (!$firstRun && $check_pg) {
+        $args .= "&";
+      } else {
+        $firstRun = false;
+      }
 
-	$url = esc_url($url) . '?' . $args;
-	
-	if ( $pages_count > 0 ) : ?>
-		<nav aria-label="Page navigation">
-			<ul class="pagination">
-				<?php
-				echo '<li class="page-item"><a class="page-link" href="'.$url.'pg=1" aria-label="Previous"><span>&laquo;</span></a></li>';
-				
-				for($i = $current_page - $maxLinks; $i <= $current_page - 1; $i++):
-					if($i >= 1):
-						echo '<li><a class="page-link" href="'.$url.'pg='.$i.'">'.$i.'</a></li>';
-					endif;
-				endfor;
+      if ($check_pg) {
+        $args .= $key . "=" . $val;
+      }
+    }
+  }
 
-				echo '<li class="page-item active"><a class="page-link" href="'.$url.'pg='.$current_page.'"> '.$current_page.'</a></li>';
-				
-				for($i = $current_page + 1; $i <= $current_page + $maxLinks; $i++):
-					if($i <= $pages_count):
-						echo '<li class="page-item"><a class="page-link" href="'.$url.'pg='.$i.'">'.$i.'</a></li>';
-					endif;
-				endfor;
+  if (is_search()) {
+    $args .= (!array_key_exists("s", $_GET)) ? 's=' . get_search_query() : '';
+    $url = get_bloginfo('url');
 
-				echo '<li class="page-item"><a class="page-link" href="'.$url.'pg='.$pages_count.'" aria-label="Next"><span>&raquo;</span></a></li>';
-				?>
-			</ul>
-		</nav>
+  } elseif (is_category()) {
+    $url = get_category_link(get_queried_object()->term_id);
+
+  } elseif (is_tax()) {
+    $url = get_term_link(get_queried_object()->term_id);
+
+  } elseif (is_tag()) {
+    $url = get_tag_link(get_queried_object()->term_id);
+
+  } elseif (is_day()) {
+    $url = get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d'));
+
+  } elseif (is_month()) {
+    $url = get_month_link(get_the_time('Y'), get_the_time('m'));
+
+  } elseif (is_year()) {
+    $url = get_year_link(get_the_time('Y'));
+
+  } elseif (is_author()) {
+    $url = get_author_posts_url(get_queried_object()->term_id);
+    
+  } else {
+    $url  = get_the_permalink(get_the_ID());
+  }
+
+  $url = esc_url($url) . $args;
+
+  if ($pages_count > 0) : ?>
+    <style>
+      a[disabled] {pointer-events: none;opacity: .5;user-select: none;}
+    </style>
+
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <?php
+        // Check if the first page 
+        $disable_link = ($current_page == 1) ? 'disabled' : '';
+
+        echo '<li class="page-item">';
+        echo '<a class="page-link" aria-label="Previous" title="Página anterior" '. $disable_link .' href="' . $url . '&pg=1"><span>&laquo;</span></a>';
+        echo '</li>';
+
+        // Previous pages
+        for ($i = $current_page - $maxLinks; $i <= $current_page - 1; $i++) :
+          if ($i >= 1) :
+            echo '<li>';
+            echo '<a class="page-link" href="' . $url . '&pg=' . $i . '">' . $i . '</a>';
+            echo '</li>';
+          endif;
+        endfor;
+
+        // Current page
+        echo '<li class="page-item active"><a class="page-link" href="' . $url . '&pg=' . $current_page . '"> ' . $current_page . '</a></li>';
+
+        // Next pages        
+        $displaying_the_last = false;
+
+        for ($i = $current_page + 1; $i <= $current_page + $maxLinks; $i++) :
+          if ($i <= $pages_count) :
+            echo '<li class="page-item">';
+            echo '<a class="page-link" href="' . $url . '&pg=' . $i . '">' . $i . '</a>';
+            echo '</li>';
+          endif;
+
+          // check if the last page is shown
+          if ( $i == $pages_count-1 || $i == $pages_count ) $displaying_the_last = true;
+        endfor;
+
+        // Show the last page
+        if ( $current_page != $pages_count && !$displaying_the_last ) :
+          echo '<li class="page-item"><a class="page-link" disabled>...</a></li>';
+          echo '<li class="page-item">';
+          echo '<a class="page-link" href="' . $url . '&pg=' . $pages_count . '">' . $pages_count . '</a>';
+          echo '</li>';
+        endif;
+
+        // Check if the last page 
+        $disable_link = ($current_page == $pages_count) ? 'disabled' : 'title="Próxima página"';
+
+        echo '<li class="page-item">';
+        echo '<a class="page-link" aria-label="Next" '. $disable_link .' href="' . (($current_page != $pages_count ) ? ($url . '&pg=' . ($current_page + 1)) : '' ) . '"><span>&raquo;</span></a>';
+        echo '</li>';
+        ?>
+      </ul>
+    </nav>
 <?php endif;
 }
+
 
 
  /**
