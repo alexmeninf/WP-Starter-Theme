@@ -162,7 +162,7 @@ function support_comments_facebook($order = 'footer', $url = '') {
 	<?php elseif ($order == 'footer') : ?>
 
 		<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0" nonce="OyPqQGQM"></script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v11.0" nonce="zjk2iiq5"></script>
 				
 	<?php endif;
 }
