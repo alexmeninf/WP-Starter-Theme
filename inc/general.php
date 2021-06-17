@@ -26,49 +26,6 @@ add_action('wp_head', 'enable_preload_fonts', 2);
 
 
 /**
- * Wp head add The OpenGraph
- */
-function get_og_protocol() { 
-	$src = '';
-
-	if ( has_post_thumbnail(get_the_ID()) ) {
-
-		$src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), "full" )[0];
-		
-	} elseif ( function_exists('get_field') ) {
-		
-		if (get_field('og_image', 'options')) {
-			$src = get_field('og_image', 'options');
-
-		} elseif (get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option')) {
-			$src = get_field('wpdevhelperWPHead-apple_touch_icon-iphone', 'option');
-
-		}
-	}
-	?>
-	<meta property="og:image" content="<?php echo $src ?>"/>  
-	<meta property="og:title" content="<?php echo is_front_page() ? '' : wp_title('', false).' | '; bloginfo('name'); ?>"/>  
-	<meta property="og:url" content="<?php the_permalink() ?>" />
-	<meta property="og:type" content="<?php echo is_single() ? 'article' : 'website' ?>" />
-	<meta property="og:locale" content="<?php bloginfo( 'language' ) ?>">
-	<meta property="og:site_name" content="<?php bloginfo( 'name' ) ?>">
-<?php
-}
-add_action('wp_head', 'get_og_protocol', 2);
-
-
-/**
- * UPDATE WORDPRESS LOGIN LOGO DARK
- */
-function wp_custom_logo_in_login() { ?>
-<style type="text/css">
-#login h1 a, .login h1 a {background-image:url('https://comet-space.nyc3.cdn.digitaloceanspaces.com/assets/default/blue-lizard-160x160.jpg');background-repeat:no-repeat;background-size: 120px;height:120px;width:120px;}body{background:#141414!important}.login #backtoblog a,.login #nav a{color:#adadad!important}.login #login_error,.login .message,.login .success,.login form{border-radius:10px}.wp-core-ui .button-primary{background:#000!important;border-color:#000!important;box-shadow:none!important;color:#fff!important;text-decoration:none!important;text-shadow:none!important;border-radius:0!important;}input[type=text]:focus, input[type=password]:focus {  border-color: #ff0083 !important;
-  box-shadow: none !important;}
-</style>
-<?php } add_action( 'login_enqueue_scripts', 'wp_custom_logo_in_login' );
-
-
-/**
  * remove some styles
  */
 function wc_remove_block_library_css(){
