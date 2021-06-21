@@ -17,7 +17,9 @@ jQuery(function () {
   // });
 
   // // animate
-  // new WOW().init();
+  //$(window).on('load', function() {
+    // new WOW().init();
+  //});
 
   smoothClick = (duration = 1200) => {
     // smooth scroll
@@ -129,6 +131,6 @@ jQuery(function () {
   }
 
   smoothClick();
-  drawerMobile();
+  // drawerMobile();
   // fixedMenu();
 });
