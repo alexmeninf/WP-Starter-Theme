@@ -54,7 +54,7 @@ new_js('main-default', 'assets/js/main.js', true);
 
 /*----------  Use JS Default  ----------*/
 use_js('jquery-default');
-use_js('utilities');
+//use_js('utilities');
 // use_js('popper-default');
 // use_js('bootstrap-default');
 // use_js('jarallax');
@@ -67,7 +67,7 @@ use_js('utilities');
 // use_js('wow-default');
 use_js('smooth-scroll');
 // use_js('countdown');
-use_js('swiped-events');
+//use_js('swiped-events');
 use_js('main-default');
 
 
