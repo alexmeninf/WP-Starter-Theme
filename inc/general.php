@@ -309,3 +309,30 @@ function menin_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'menin_widgets_init' );
+
+
+/**
+ * callback_theme_logo
+ * Exiba uma logo com CEO na página.
+ *
+ * @param  mixed $args
+ * @return void
+ */
+function callback_theme_logo($args)
+{
+  $img_uri     = $args['img'];
+  $max_height  = isset($args['max_height']) ? 'height:' . $args['max_height'] . ';' : '';
+  $custom_name = isset($args['title']) ? $args['title'] : get_bloginfo('name');
+  $enable_link = isset($args['link']) ? true : false;
+  ?>
+
+  <h1 class="mb-4 text-center">
+    <?= $enable_link ? '<a href="' . get_bloginfo('url') . '" class="d-inline-block">' : '' ?>
+    <img src="<?= $img_uri  ?>" alt="Logo <?= $custom_name ?>" title="<?= $custom_name ?>" class="img-fluid" style="<?= $max_height ?>">
+    <span class="visually-hidden"><?= $custom_name ?></span>
+    <?= $enable_link ? '</a>' : '' ?>
+  </h1>
+
+<?php }
+
+add_filter('logo_theme', 'callback_theme_logo', 10, 1); ?>
