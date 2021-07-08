@@ -110,8 +110,13 @@ function support_comments_facebook($order = 'footer', $url = '') {
 	if ($order == 'post') : ?>
 
 		<style>
-			.fb_iframe_widget_fluid_desktop iframe { width: 100% !important; }
+			.fb_iframe_widget_fluid_desktop iframe { width: 100% !important; }.color-facebook {color: #0554c9;}
 		</style>
+		<?php if (strstr($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strstr($_SERVER['HTTP_USER_AGENT'], 'iPad') || strstr($_SERVER['HTTP_USER_AGENT'], 'Mac')) : ?>
+		  <p class="text-dark ms-2" style="font-size:15px">
+			<i class="fab fa-facebook color-facebook me-1"></i> Não consegue comentar? <a href="https://facebook.com/home.php" target="_blank" rel="noreferrer" title="Conecte ao facebook" class="text-decoration-none color-facebook">Conecte aqui à sua conta do Facebook</a> em outra página e volte.
+		  </p>
+		<?php endif; ?>
 		<div class="comment-box">
 			<div class="fb-comments" data-order-by="reverse_time" data-href="<?php echo $url ?>" data-width="100%" data-numposts="10"></div>
 		</div>  
