@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('UTC');
+
 /**
  * the_support_material
  * Mostra o botão do material de apoio.
@@ -58,13 +60,20 @@ function the_sales_button( $btnText = 'Quero me matricular agora!' ) {
  * @return string
  */
 function the_embed_video($iframe, $date_published, $img) {
+  
   $html_embed = '<div class="embed-video ratio ratio-16x9">';
   $html_embed .= embed_video($iframe);
   $html_embed .= '</div>';
 
   $html_img = '<img src="'. $img['url'] .'" alt="Em breve" class="img-fluid img_coming_soon">';
 
-  if ( is_published($date_published) ) {
+  // Libera o vídeo meia noite, caso for uma live.
+  if (get_field('enable_earlier')) {
+    $data_event_with_year = date('Y-m-d', strtotime(str_replace('-', '/', $date_published)));
+    $enable_earlier = (strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($data_event_with_year . ' 00:00:00')) ? true : false;
+  }
+
+  if ( is_published($date_published) || $enable_earlier ) {
     echo $html_embed;
   } else {
     echo $html_img;
@@ -98,14 +107,35 @@ function embed_video($iframe) {
 
 
 /**
+ * embed_live_chat_youtube
+ * Mostra o chat do vídeo ao vivo
+ *
+ * @param  mixed $iframe
+ * @return void
+ */
+function embed_live_chat_youtube($iframe) {
+  preg_match('/src="(.+?)"/', $iframe, $matches);
+  $url = $matches[1];
+
+  if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $url, $match_id)) {
+    $html_embed = '<div class="embed-video ratio ratio-1x1">';
+    $html_embed .= '<iframe width="1280" height="720" src="https://www.youtube.com/live_chat?v='.$match_id[1].'&embed_domain='.$_SERVER['SERVER_NAME'].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    $html_embed .= '</div>';
+  } else {
+    $html_embed = '<p class="op-4 fs-6 py-5"><i class="fad fa-info-circle"></i> O chat estará disponível somente no dia de estreia...</p>';
+  }
+
+  echo $html_embed;
+}
+
+
+/**
  * is_published
  *
  * @param  mixed $date
  * @return boolean
  */
-function is_published($date) {
-  date_default_timezone_set('UTC');
-  
+function is_published($date) {  
   $check = false;
 
   if ( strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($date) ) {
@@ -113,4 +143,23 @@ function is_published($date) {
   }
 
    return $check;
+}
+
+
+/**
+ * is_today_published_text
+ *
+ * @param  mixed $date
+ * @return string
+ */
+function is_today_published_text($date) {
+  $data_event_with_year = date('Y-m-d', strtotime(str_replace('-', '/', $date)));
+  $data_event           = date('d-m', strtotime(str_replace('-', '/', $date)));
+  $hour_event           = date('H:i', strtotime($date));
+
+  if ( strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($data_event_with_year . ' 00:00:00') ) {
+    return '<i class="far fa-lock-alt text-green fsp-110"></i> Hoje às ' . $hour_event . 'h';
+  } else {
+    return '<i class="far fa-lock-alt text-green fsp-110"></i> Disponível dia ' . str_replace('-', '/', $data_event) . ' ('. $hour_event .')';
+  }
 }
