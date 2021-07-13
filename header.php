@@ -17,6 +17,7 @@
 
 </head>
 <body <?php body_class() ?>>
+	<?php wp_body_open(); ?>
 
 	<?php 
 	// Código após abertura do <body> para analitycs
