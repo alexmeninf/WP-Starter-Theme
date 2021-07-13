@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('UTF');
 
 /**
  * the_support_material
@@ -69,7 +69,7 @@ function the_embed_video($iframe, $date_published, $img) {
   // Libera o vídeo meia noite, caso for uma live.
   if (get_field('enable_earlier')) {
     $data_event_with_year = date('Y-m-d', strtotime(str_replace('-', '/', $date_published)));
-    $enable_earlier = (strtotime(date('Y-m-d H:i:s')) >= strtotime($data_event_with_year . ' 00:00:00')) ? true : false;
+    $enable_earlier = (strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($data_event_with_year . ' 00:00:00')) ? true : false;
   }
 
   if ( is_published($date_published) || $enable_earlier ) {
@@ -137,7 +137,7 @@ function embed_live_chat_youtube($iframe) {
 function is_published($date) {  
   $check = false;
 
-  if ( strtotime(date('Y-m-d H:i:s')) >= strtotime($date) ) {
+  if ( strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($date) ) {
     $check = true;
   }
 
@@ -156,7 +156,7 @@ function is_today_published_text($date) {
   $data_event           = date('d-m', strtotime(str_replace('-', '/', $date)));
   $hour_event           = date('H:i', strtotime($date));
 
-  if ( strtotime(date('Y-m-d H:i:s')) >= strtotime($data_event_with_year . ' 00:00:00') ) {
+  if ( strtotime(date('Y-m-d H:i:s') . '-3 hours') >= strtotime($data_event_with_year . ' 00:00:00') ) {
     return '<i class="far fa-lock-alt text-green fsp-110"></i> Hoje às ' . $hour_event . 'h';
   } else {
     return '<i class="far fa-lock-alt text-green fsp-110"></i> Disponível dia ' . str_replace('-', '/', $data_event) . ' ('. $hour_event .')';
